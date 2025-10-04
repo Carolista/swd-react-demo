@@ -2,7 +2,7 @@
 
 A simplified version of the front end React app for the art gallery demo that will be continued in Unit 2.
 
-> Students: Fork and clone this to your local machine. Make sure you run the React project from the project folder, not the main repo folder.
+> Students: Fork and clone this to your local machine. 
 ---
 
 ### Part 1
@@ -18,12 +18,12 @@ Focus:
 - Loop over lists, and produce multiple instances of JSX or minor components
 - Storing test data and passing data through props
 
-> Use the `part1-solution-getting-started` branch to check my solution.
+> Use the `part1-solution-basics` branch to check my solution.
 ---
 
 ### Part 2
 
-> Use the `part2-starter-using-state` branch to get started.
+> Use the `part2-starter-state` branch to get started.
 
 Focus:
 - Implementing conditional rendering within JSX with ternary operators (`?` and `:`) and logical AND operator (`&&`)
@@ -31,22 +31,22 @@ Focus:
 - Lifting state to top level
 - Passing event handlers with props
 
-> Use the `part2-solution-using-state` branch to check my solution.
+> Use the `part2-solution-state` branch to check my solution.
 ---
 
 ### Part 3
-> Use the `part3-starter-routing` branch to get started.
+> Use the `part3-starter-forms` branch to get started.
 
 Focus:
 - Managing form data with React
 - Utilizing dynamic handlers
 
-> Use the `part3-solution-routing` branch to check my solution.
+> Use the `part3-solution-forms` branch to check my solution.
 ---
 
 ### Part 4
 
-> Use the `part4-starter-forms-and-fetching` branch to get started.
+> Use the `part4-starter-lifecycles` branch to get started.
 
 Focus:
 - Fetching data from an external API
@@ -55,12 +55,12 @@ Focus:
 - Handling errors with `try`/`catch`/`finally`
 - Hooking into the DOM with useRef()
 
-> Use the `part4-solution-forms-and-fetching` branch to check my solution.
+> Use the `part4-solution-lifecycles` branch to check my solution.
 ---
 
 ### Part 5
 
-> Use the `part4-starter-forms-and-fetching` branch to get started.
+> Use the `part5-starter-routing` branch to get started.
 
 Focus:
 - Adding the React Router dependency
@@ -69,5 +69,5 @@ Focus:
 - Incorporating the `<Link>` component for sending users to other components based on routes
 - Leveraging the `useNavigate()` hook for re-routing from a component (without the user clicking a link)
 
-> Use the `part4-solution-forms-and-fetching` branch to check my solution.
+> Use the `part5-solution-routing` branch to check my solution.
 ---
