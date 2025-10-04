@@ -1,0 +1,33 @@
+button {
+	color: white;
+	background-color: #c66311;
+	margin-top: 20px;
+	padding: 5px;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.error {
+	color: #b03a2e;
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.checkbox-with-label {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+

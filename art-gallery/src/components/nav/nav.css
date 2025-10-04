@@ -1,0 +1,21 @@
+.navlink:link,
+.navlink:visited {
+	color: white;
+	font-weight: 400;
+}
+.navlink:hover,
+.navlink:active {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	gap: 15px;
+}
+
+.non-link {
+	opacity: 0.6;
+}
