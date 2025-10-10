@@ -15,7 +15,7 @@ Focus:
 - Creating some components for composing pages
 - Adding temporary hard-coded content and structure with basic HTML
 - Incorporating CSS & responsive layouts after content is in place
-- Loop over lists, and produce multiple instances of JSX or minor components
+- Loop over lists with .map() to produce multiple instances of JSX or minor components
 - Storing test data and passing data through props
 
 > Use the `part1-solution-basics` branch to check my solution.
@@ -28,7 +28,7 @@ Focus:
 Focus:
 - Implementing conditional rendering within JSX with ternary operators (`?` and `:`) and logical AND operator (`&&`)
 - Utilizing the `useState()` hook for state variables that will trigger re-rendering if their values change
-- Lifting state to top level
+- Lifting state to parent
 - Passing event handlers with props
 
 > Use the `part2-solution-state` branch to check my solution.
