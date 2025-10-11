@@ -1,0 +1,24 @@
+.event-card-container {
+	/* masonry layout */
+	columns: 2;
+	column-gap: 15px;
+	margin-top: 30px;
+}
+
+.event-card-image {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.title-text {
+    color: #b95a0a;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.subtitle-text {
+    color: #1e323c;
+    font-size: 1.2rem;
+
+}

@@ -9,14 +9,14 @@ button {
 }
 
 .form-item {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 20px;
 }
 
 textarea {
-    min-height: 200px;
+	min-height: 200px;
 }
 
 .error {
@@ -30,4 +30,3 @@ textarea {
 	flex-direction: row;
 	gap: 8px;
 }
-

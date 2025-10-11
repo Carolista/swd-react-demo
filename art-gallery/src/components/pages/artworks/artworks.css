@@ -1,0 +1,17 @@
+.artwork-card-container {
+	/* masonry layout */
+	columns: 3;
+	column-gap: 15px;
+	margin-top: 30px;
+}
+
+.artwork-card-image {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.artwork-card-artist-text {
+	color: #1e323c;
+}
+
+/* TODO: define better styling for text (as <p> not <hx>) */

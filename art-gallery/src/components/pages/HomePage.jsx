@@ -10,7 +10,11 @@ const HomePage = () => {
 					celebrated local artists.
 				</p>
 			</div>
-			<img src="/gallery-public.jpeg" width="100%" alt="Main Entry of Midtown Art Gallery" />
+			<img
+				src="/images/gallery-home.jpeg"
+				width="100%"
+				alt="Main Entry of Midtown Art Gallery"
+			/>
 		</main>
 	);
 };

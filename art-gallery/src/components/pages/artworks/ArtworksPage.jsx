@@ -1,27 +1,23 @@
-import { use } from 'react';
 import { Link } from 'react-router';
-import { DataContext } from '../../context/DataContext';
-import Card from './Card';
-import Loading from './Loading';
+import ArtworkCard from './ArtworkCard';
+import Loading from '../../common/Loading';
 
-const ArtworksPage = () => {
-	const { isLoading, allArtworks } = use(DataContext);
-
+const ArtworksPage = ({ isLoading, artworks }) => {
 	if (isLoading) {
 		return <Loading dataName="artworks" />;
 	} else {
-		let artworksJSX = [...allArtworks].map(artwork => {
+		let artworksJSX = [...artworks].map(artwork => {
 			return (
 				<Link to={'/artworks/details/' + artwork.id} key={artwork.id}>
-					<Card artwork={artwork} />
+					<ArtworkCard artwork={artwork} />
 				</Link>
 			);
 		});
 		return (
 			<main className="main-content">
 				<h1>Artworks</h1>
-				{allArtworks.length ? (
-					<div className="card-container">{artworksJSX}</div>
+				{artworks.length ? (
+					<div className="artwork-card-container">{artworksJSX}</div>
 				) : (
 					<p>
 						<em>We're sorry, there are no artworks to display at this time.</em>
