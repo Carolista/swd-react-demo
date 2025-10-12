@@ -5,7 +5,6 @@ const Checkbox = ({ id, name, label, isChecked, handleChange }) => {
 				id={id}
 				name={name}
 				value={id}
-				className="checkbox"
 				type="checkbox"
 				checked={isChecked}
 				onChange={handleChange}

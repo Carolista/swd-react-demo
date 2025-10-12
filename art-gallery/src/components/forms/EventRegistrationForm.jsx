@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
 import InputErrorMessage from './input/InputErrorMessage';
 import TextInput from './input/TextInput';
 import Button from './input/Button';
 import NumberInput from './input/NumberInput';
+import Spacer from '../common/Spacer';
+import Email from './input/Email';
 
 let initialData = {
 	eventId: null,
@@ -20,11 +21,13 @@ let errorMessages = {
 	numberOfGuestsRequired: 'The number of guests must be at least 1.',
 };
 
-const EventRegistrationForm = () => {
+const EventRegistrationForm = ({ event, handleCloseForm }) => {
 	const [data, setData] = useState(initialData);
 	const [hasErrors, setHasErrors] = useState(false);
 
-	const navigate = useNavigate();
+	const isValid = () => {
+		return data.firstName && data.lastName && data.email && data.numberOfGuests;
+	};
 
 	const handleDataChange = event => {
 		let updatedData = {
@@ -36,22 +39,26 @@ const EventRegistrationForm = () => {
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		if (!firstName || !lastName || !email || !numberOfGuests) {
+		if (!isValid()) {
 			setHasErrors(true);
 		} else {
-			navigate('/events');
+			handleCloseForm();
 		}
 	};
 
-	// FIXME: This form uses a lot of Bootstrap classes
-    
+	// FIXME: Redo layout and ensure it works with media queries
+
 	return (
 		<>
-			<h3>Register for an Event</h3>
+			<h3>RESERVE YOUR TICKETS</h3>
+			<h5>
+				{event.title}: {event.subtitle}
+			</h5>
+
 			<form>
-				<div className="container">
-					<div className="row">
-						<div className="form-item col-8">
+				<div>
+					<div>
+						<div className="form-item">
 							<TextInput
 								id="firstName"
 								label="First Name"
@@ -63,7 +70,7 @@ const EventRegistrationForm = () => {
 								msg={errorMessages['firstNameRequired']}
 							/>
 						</div>
-						<div className="form-item col-8">
+						<div className="form-item">
 							<TextInput
 								id="lastName"
 								label="Last Name"
@@ -76,9 +83,9 @@ const EventRegistrationForm = () => {
 							/>
 						</div>
 					</div>
-					<div className="row">
-						<div className="form-item col-8">
-							<TextInput
+					<div>
+						<div className="form-item">
+							<Email
 								id="email"
 								label="Email Address"
 								value={data.email}
@@ -89,10 +96,10 @@ const EventRegistrationForm = () => {
 								msg={errorMessages['emailRequired']}
 							/>
 						</div>
-						<div className="form-item col-8">
+						<div className="form-item">
 							<NumberInput
 								id="numberOfGuests"
-								label="Number of Guests Attending"
+								label="Number of Tickets"
 								value={data.numberOfGuests}
 								handleChange={handleDataChange}
 							/>
@@ -104,12 +111,22 @@ const EventRegistrationForm = () => {
 					</div>
 				</div>
 
-				<Button
-					id="event-registration-button"
-					type="submit"
-					label="Complete Registration"
-					handleClick={handleSubmit}
-				/>
+				<div className="register-button-container">
+					<Button
+						id={`cancel-button-event-${event.id}`}
+						type="button"
+						label="Cancel"
+						classes="cancel"
+						handleClick={handleCloseForm}
+					/>
+					<Spacer marginX="4px" />
+					<Button
+						id="event-registration-button"
+						type="submit"
+						label="Complete Registration"
+						handleClick={handleSubmit}
+					/>
+				</div>
 			</form>
 		</>
 	);
