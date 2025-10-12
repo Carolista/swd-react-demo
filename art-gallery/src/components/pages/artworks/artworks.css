@@ -10,8 +10,11 @@
 	margin-bottom: 8px;
 }
 
-.artwork-card-artist-text {
-	color: #1e323c;
+.artwork-card-title {
+	color: #b95a0a;
+	font-size: 1.1rem;
 }
 
-/* TODO: define better styling for text (as <p> not <hx>) */
+.artwork-card-artist {
+	color: #1e323c;
+}

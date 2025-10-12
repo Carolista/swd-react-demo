@@ -43,19 +43,20 @@ const ArtworkDetailsPage = ({ isLoading, artworks }) => {
 						text={'View All Artworks'}
 						handleClick={handleGoToArtworksPage}
 					/>
-					<h2>ARTWORK DETAILS</h2>
-					<div className="container">
-						<div className="row">
-							<div className="col-6">
-								<img className="card-image" src={artwork.getImageURL()} />
-							</div>
-							<div className="col-6">
-								<h4 className="mb-4 mt-2 font-bold">{artwork.title}</h4>
-								<h5>Artist</h5>
-								{artwork.artist}
-								<h5>Category</h5>
-								{artwork.category}
-							</div>
+					<h2>{artwork.title}</h2>
+					<div>
+						<div>
+							<strong>Artist: </strong>
+							{artwork.artist}
+							{artwork.category && (
+								<>
+									&nbsp;| <strong>Category: </strong>
+									{artwork.category}
+								</>
+							)}
+						</div>
+						<div>
+							<img className="artwork-card-image" src={artwork.getImageURL()} />
 						</div>
 					</div>
 				</main>
