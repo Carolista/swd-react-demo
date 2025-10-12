@@ -11,7 +11,7 @@
 
 @import url('./App.css'); /* Global definitions */
 @import url('./components/common/common.css');
-@import url('./components/common/user-input/user-input.css');
+@import url('./components/forms/forms.css');
 @import url('./components/layout/layout.css');
 @import url('./components/pages/artworks/artworks.css');
 @import url('./components/pages/events/events.css');

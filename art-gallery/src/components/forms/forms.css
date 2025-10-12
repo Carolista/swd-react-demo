@@ -8,6 +8,10 @@ button {
 	border-radius: 4px;
 }
 
+textarea {
+    min-height: 200px;
+}
+
 .form-item {
 	display: flex;
 	flex-direction: column;
@@ -15,18 +19,14 @@ button {
 	margin-bottom: 20px;
 }
 
-textarea {
-	min-height: 200px;
+.checkbox-with-label {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
 }
 
 .error {
 	color: #b03a2e;
 	font-size: 0.9rem;
 	margin: 0;
-}
-
-.checkbox-with-label {
-	display: flex;
-	flex-direction: row;
-	gap: 8px;
 }
