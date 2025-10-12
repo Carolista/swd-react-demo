@@ -1,20 +1,20 @@
 export const mockEvents = [
 	{
-        id: 125,
-		date: new Date('2025-11-14T18:30:00'),
+		id: 125,
+		date: '2025-11-14T18:30:00',
 		title: 'The Concrete Forest',
 		subtitle: 'Opening Reception with Elias Vance',
 		description:
 			"Join us for the opening night celebration of The Concrete Forest, a striking new exhibition by St. Louis-based photographer Elias Vance. Vance's work captures the quiet beauty of urban decay and the resilience of nature pushing through the pavement of neighborhoods like The Grove and Cherokee Street. His large-scale, monochromatic prints explore themes of transition and history in the city. The evening will feature a meet-and-greet with the artist, complimentary light appetizers from a local caterer, and a cash bar featuring local St. Louis craft beer.",
-		bio: "Elias Vance is a photographer and graphic designer born and raised in South City, St. Louis. He earned his BFA from Washington University and has spent the last decade documenting the textures and overlooked corners of his hometown. His work is heavily influenced by the architecture of Eads Bridge and the brutalist elements of St. Louis's post-war landscape.",
+		bio: "Elias Vance is a photographer and graphic designer born and raised in South City, St. Louis. He earned his BFA from Washington University in St. Louis and has spent the last decade documenting the textures and overlooked corners of his hometown. His work is heavily influenced by the architecture of Eads Bridge and the brutalist elements of St. Louis's post-war landscape.",
 		criteria:
 			'Open to the Public (Free Admission). RSVP strongly recommended for capacity control. All ages welcome, though guests must be 21+ with valid ID to purchase alcoholic beverages.',
 		ticketPrice: 0,
-		imageId: '358tBZpz/Concrete-Forest-mock.png',
+		imageId: 'Z6xvJGnn/m/Concrete-Forest-2.png',
 	},
 	{
-        id: 534,
-		date: new Date('2025-11-21T19:00:00'),
+		id: 534,
+		date: '2025-11-21T19:00:00',
 		title: 'Vino Veritas',
 		subtitle: 'A Wine & Watercolor Pairing',
 		description:
@@ -23,11 +23,11 @@ export const mockEvents = [
 		criteria:
 			'Ages 21+ only. Valid government-issued photo ID required at the door. Ticket purchase required in advance due to limited capacity.',
 		ticketPrice: 75,
-		imageId: 'Ng4x7KrW/Vino-Veritas-mock.png',
+		imageId: 'Vpg1qMfq/m/Vino-Veritas-2.png',
 	},
 	{
-        id: 209,
-		date: new Date('2025-12-06T18:00:00'),
+		id: 209,
+		date: '2025-12-06T18:00:00',
 		title: 'The Arch Angels Annual Gala',
 		subtitle: 'A Benefit Auction',
 		description:
@@ -36,11 +36,11 @@ export const mockEvents = [
 		criteria:
 			'Ticket purchase required. Business formal or Cocktail attire suggested. Open to the public, with a recommended age of 18+ for a formal atmosphere. Must be 21+ with valid ID for open bar access.',
 		ticketPrice: 125,
-		imageId: '99jJX97j/Arch-Angels-mock.png',
+		imageId: 'M56HNwwX/m/Arch-Angels-2.png',
 	},
 	{
-        id: 359,
-		date: new Date('2025-12-13T13:30:00'),
+		id: 359,
+		date: '2025-12-13T13:30:00',
 		title: 'Clay & Cabernet',
 		subtitle: 'A Sip-and-Sculpt Workshop',
 		description:
@@ -49,6 +49,6 @@ export const mockEvents = [
 		criteria:
 			'Ages 21+ only. Valid government-issued photo ID required at the door. Ticket purchase required for material and instructor fees.',
 		ticketPrice: 60,
-		imageId: '8LSxrrtr/Clay-Cabernet-mock.png',
+		imageId: '8LSxrrtr/m/Clay-Cabernet-mock.png',
 	},
 ];

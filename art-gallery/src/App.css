@@ -18,7 +18,7 @@ body {
 }
 
 body::before {
-    /* Photo credit: https://www.pexels.com/@gdtography-277628/ */
+	/* Photo credit: https://www.pexels.com/@gdtography-277628/ */
 	background-image: url('https://i.ibb.co/TD6fmXWK/white-installation.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -62,16 +62,24 @@ footer {
 	min-height: 50px;
 }
 
-strong,
-.bold {
+strong {
 	font-weight: 700;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
 	font-family: 'Kodchasan', sans-serif;
 	text-transform: uppercase;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+	margin: 12px 0 0;
 }
 
 h1 {
@@ -89,25 +97,33 @@ h2 {
 	width: auto;
 	border-radius: 2px;
 	padding: 5px 8px;
-	margin-bottom: 20px;
+	margin: 20px 0;
 }
 
 h3 {
 	color: #1e323c;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 }
 
 h4 {
-	color: #1e323c;
-	font-size: 1.05rem;
+	color: #c66311;
+	font-size: 1.2rem;
 }
 
 h5 {
-	color: #c66311;
+	color: #1e323c;
 	font-size: 1.1rem;
-	font-weight: bold;
-	margin: 20px 0 0;
+}
+
+h6 {
+	color: #c66311;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+p {
+	margin: 6px 0;
 }
 
 a,
@@ -123,16 +139,20 @@ a:active {
 	color: #b95a0a;
 }
 
-.white-link {
-	color: white;
-	font-weight: normal;
+iframe {
+	height: 450px;
+	width: calc(100% - 4px); /* border */
+	margin: 20px 0;
+	border: 2px solid #1e323c;
 }
 
-.white-link:hover,
-.white-link:active {
-	color: ghostwhite;
+.icons-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
-.icon-space-right {
-	margin-right: 6px;
+.larger-text {
+	font-size: 1.2rem;
 }

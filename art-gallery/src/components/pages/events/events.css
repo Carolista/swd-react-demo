@@ -11,14 +11,41 @@
 }
 
 .title-text {
-    color: #b95a0a;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 0;
+	color: #b95a0a;
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin-bottom: 0;
 }
 
 .subtitle-text {
-    color: #1e323c;
-    font-size: 1.2rem;
+	color: #1e323c;
+	font-size: 1.2rem;
+}
 
+.bio-subheader {
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.date-time-price {
+	display: flex;
+	flex-direction: row;
+	color: white;
+	background-color: #b95a0a;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin: 10px 0;
+	padding: 6px 12px;
+}
+
+.criteria {
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.register-button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }

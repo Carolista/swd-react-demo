@@ -7,7 +7,6 @@ import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import ArtworkDetailsPage from './components/pages/artworks/ArtworkDetailsPage';
 import AboutPage from './components/pages/AboutPage';
 import EventsPage from './components/pages/events/EventsPage';
-import EventRegistrationForm from './components/pages/events/EventRegistrationForm';
 import LocationPage from './components/pages/LocationPage';
 import Footer from './components/layout/Footer';
 
@@ -78,9 +77,7 @@ function App() {
 						<ArtworkDetailsPage isLoading={isLoading} artworks={allArtworks} />
 					}
 				/>
-				
 				<Route path="/events" element={<EventsPage />} />
-				<Route path="/events/register" element={<EventRegistrationForm />} />
 				<Route path="/location" element={<LocationPage />} />
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
