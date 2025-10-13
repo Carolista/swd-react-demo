@@ -36,21 +36,23 @@ const EventCard = ({ event }) => {
 	return (
 		<Card>
 			<img className="event-card-image" src={getImageURL()} />
-			<p className="title-text">{event.title}</p>
-			<p className="subtitle-text">{event.subtitle}</p>
-			<p>{event.description}</p>
+            <div>
+                <p className="title-text">{event.title}</p>
+                <p className="subtitle-text">{event.subtitle}</p>
+                <p>{event.description}</p>
+            </div>
 			{event.bio && (
-				<>
+				<div>
 					<p className="bio-subheader">Artist Bio</p>
 					<p>{event.bio}</p>
-				</>
+				</div>
 			)}
-			<p className="date-time-price">
+			<div className="date-time-price">
 				{getFormattedDate()}
 				<Spacer marginX="10px" character="|" />
 				{getTicketPrice()}
-			</p>
-			<p className="criteria">{event.criteria}</p>
+			</div>
+			<div className="criteria">{event.criteria}</div>
 			{openForm ? (
 				<EventRegistrationForm
 					event={event}
