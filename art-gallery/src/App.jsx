@@ -9,11 +9,13 @@ import AboutPage from './components/pages/AboutPage';
 import EventsPage from './components/pages/events/EventsPage';
 import LocationPage from './components/pages/LocationPage';
 import Footer from './components/layout/Footer';
+import Event from './classes/Event';
 
 function App() {
 	// State variables that React will pay attention to for re-rendering
 	const [isLoading, setIsLoading] = useState(true);
 	const [allArtworks, setAllArtworks] = useState(null);
+    const [allEvents, setAllEvents] = useState(null);
 
 	// Async function that makes call to fetch data and handles errors
 	const fetchArtworks = async () => {
@@ -49,15 +51,53 @@ function App() {
 		}
 	};
 
+	const fetchEvents = async () => {
+		let events = [];
+
+		try {
+			const response = await fetch(
+				'https://docs.google.com/document/d/17tBzjrBity_10c3Yqab-8_Eu8_xo0PJfiAkwsF3ex_k/export?format=txt'
+			);
+
+			if (!response.ok) {
+				const errorData = await response.json();
+				throw new Error(
+					errorData.message || `ERROR - Status ${response.status}`
+				);
+			} else {
+				const data = await response.json();
+				events = data.map(event => {
+					let newEvent = new Event(
+						event.id,
+                        event.date,
+						event.title,
+						event.subtitle,
+                        event.description,
+                        event.bio,
+                        event.criteria,
+                        event.ticketPrice,
+						event.imageId
+					);
+					return newEvent;
+				});
+			}
+		} catch (error) {
+			console.error(error.message);
+		} finally {
+			setAllEvents(events);
+		}
+	};
+
 	useEffect(() => {
 		fetchArtworks();
+        fetchEvents();
 	}, []);
 
 	useEffect(() => {
-		if (isLoading && allArtworks !== null) {
+		if (isLoading && allArtworks !== null && allEvents !== null) {
 			setIsLoading(false);
 		}
-	}, [allArtworks]);
+	}, [allArtworks, allEvents]);
 
 	return (
 		<>
@@ -77,7 +117,7 @@ function App() {
 						<ArtworkDetailsPage isLoading={isLoading} artworks={allArtworks} />
 					}
 				/>
-				<Route path="/events" element={<EventsPage />} />
+				<Route path="/events" element={<EventsPage events={allEvents} />} />
 				<Route path="/location" element={<LocationPage />} />
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
