@@ -9,8 +9,8 @@ const LocationPage = () => {
 			<h2>Gallery</h2>
 
 			<p className="larger-text">
-				<i className="fa-solid fa-location-dot icon-space-right"></i>3230
-				Washington Avenue | Saint Louis, MO 63103
+				<Icon classes="fa-solid fa-location-dot" label="3230
+				Washington Avenue | Saint Louis, MO 63103" />
 			</p>
 
 			<iframe
