@@ -45,7 +45,38 @@
 }
 
 .register-button-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* CSS Grid system for form layout */
+
+.first-name-item {
+	grid-area: firstName;
+}
+.last-name-item {
+	grid-area: lastName;
+}
+.email-item {
+	grid-area: email;
+}
+.number-of-guests-item {
+	grid-area: numGuests;
+}
+.cancel-register-button {
+	grid-area: cancel;
+}
+.submit-register-button {
+	grid-area: submit;
+}
+
+.register-form-grid {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		'firstName firstName firstName lastName lastName lastName'
+		'email email email email numGuests numGuests'
+		'. . . . cancel submit';
+	gap: 10px;
 }

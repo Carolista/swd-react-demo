@@ -117,7 +117,7 @@ function App() {
 						<ArtworkDetailsPage isLoading={isLoading} artworks={allArtworks} />
 					}
 				/>
-				<Route path="/events" element={<EventsPage events={allEvents} />} />
+				<Route path="/events" element={<EventsPage isLoading={isLoading} events={allEvents} />} />
 				<Route path="/location" element={<LocationPage />} />
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>

@@ -1,23 +1,11 @@
-button {
-	color: white;
-	background-color: #1e323c;
-	padding: 5px;
-	outline: none;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+.form-item {
+	display: flex;
+	flex-direction: column;
 }
-
-button.cancel {
-	background-color: #c66311;
-}
-
-/* FIXME: standardize margins on labels and all input fields, maybe continue to use .form-item for that */
 
 label {
 	font-size: 1.1rem;
 	font-weight: 500;
-	/* margin: 12px 0 0 */
 }
 
 input {
@@ -25,19 +13,8 @@ input {
 	margin: 0;
 }
 
-.number {
-	width: 50px;
-}
-
 textarea {
 	min-height: 200px;
-}
-
-.form-item {
-	display: flex;
-	flex-direction: column;
-	gap: 6px;
-	margin: 12px 0 0;
 }
 
 .checkbox-with-label {
@@ -50,4 +27,18 @@ textarea {
 	color: #b03a2e;
 	font-size: 0.9rem;
 	margin: 0;
+}
+
+button {
+	color: white;
+	background-color: #1e323c;
+	padding: 5px;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button.cancel {
+	background-color: #c66311;
 }
