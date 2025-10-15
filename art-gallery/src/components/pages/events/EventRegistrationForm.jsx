@@ -1,11 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import InputErrorMessage from '../../forms/input/InputErrorMessage';
-import TextInput from '../../forms/input/TextInput';
 import Button from '../../forms/input/Button';
-import NumberInput from '../../forms/input/NumberInput';
 import Spacer from '../../common/Spacer';
-import Email from '../../forms/input/Email';
 import FormItem from '../../forms/FormItem';
+import Input from '../../forms/input/Input';
 
 let initialData = {
     eventId: null,
@@ -25,6 +23,12 @@ let errorMessages = {
 const EventRegistrationForm = ({ event, handleCloseForm }) => {
     const [data, setData] = useState(initialData);
     const [hasErrors, setHasErrors] = useState(false);
+
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, []);
 
     const isValid = () => {
         return data.firstName && data.lastName && data.email && data.numberOfGuests;
@@ -56,10 +60,11 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
             <Spacer marginY="10px" />
             <form className="register-form-grid">
                 <FormItem classes="first-name-item">
-                    <TextInput
+                    <Input
                         id="firstName"
                         label="First Name"
                         value={data.firstName}
+                        ref={inputRef}
                         required={true}
                         handleChange={handleDataChange}
                     />
@@ -69,7 +74,7 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                     />
                 </FormItem>
                 <FormItem classes="last-name-item">
-                    <TextInput
+                    <Input
                         id="lastName"
                         label="Last Name"
                         value={data.lastName}
@@ -82,10 +87,11 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                     />
                 </FormItem>
                 <FormItem classes="email-item">
-                    <Email
+                    <Input
                         id="email"
                         classes="email"
                         label="Email Address"
+                        type="email"
                         value={data.email}
                         required={true}
                         handleChange={handleDataChange}
@@ -96,9 +102,10 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                     />
                 </FormItem>
                 <FormItem classes="number-of-guests-item">
-                    <NumberInput
+                    <Input
                         id="numberOfGuests"
                         label="Number of Guests"
+                        type="number"
                         value={data.numberOfGuests}
                         required={true}
                         handleChange={handleDataChange}
