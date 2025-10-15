@@ -1,0 +1,36 @@
+/* 
+    Most of my CSS files are organized by colocation,
+    BUT I didn't want to have to import them into every 
+    single file, so I have imported them here instead.
+
+    It is important to observe order of precedence 
+    by putting general CSS definitions first and then 
+    putting the most specific definitions (which may
+    override general definitions) last.
+*/
+
+@import url('./App.css'); /* Global definitions */
+@import url('./components/common/common.css');
+@import url('./components/forms/forms.css');
+@import url('./components/layout/layout.css');
+@import url('./components/pages/pages.css');
+@import url('./components/pages/artworks/artworks.css');
+@import url('./components/pages/events/events.css');
+
+/* 
+    NOTE ON RESPONSIVE DESIGN
+    
+    I have set my default styles for widths < 380px 
+    (a few devices really are that small) and have used 
+    media queries within the files imported above to set 
+    definitions for larger screen widths on local selectors. 
+    
+    I have breakpoints at:
+    380, 480, 768, 1024, 1200, 1366, and 1600
+
+    It is not always necessary to finesse it that much!
+    
+    I did not use media queries for variable font sizes and 
+    most margin and padding values, but instead used clamp() 
+    to control min, preferred, and max values.
+*/

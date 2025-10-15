@@ -1,0 +1,70 @@
+.artwork-card-container {
+    /* masonry layout */
+    columns: 1;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+
+.artwork-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artwork-card-image {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 8px;
+}
+
+.artwork-card-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.artwork-card-text > h5 {
+    margin-bottom: 4px;
+}
+
+.artwork-card-text > h6 {
+    margin-top: 0;
+}
+
+/** MEDIA QUERIES **/
+
+/* 380-479 */
+@media screen and (min-width: 380px) {
+    /* No changes needed in this range */
+}
+
+/* 480-767 */
+@media screen and (min-width: 480px) {
+    /* No changes needed in this range */
+}
+
+/* 768-1024 */
+@media screen and (min-width: 768px) {
+    .artwork-card-container {
+        columns: 2;
+    }
+}
+
+/* 1024-1365 */
+@media screen and (min-width: 1024px) {
+    .artwork-card-container {
+        columns: 3;
+    }
+}
+
+/* 1200-1365 */
+@media screen and (min-width: 1200px) {
+    /* No changes needed in this range */
+}
+
+/* 1366+ */
+@media screen and (min-width: 1366px) {
+    .artwork-card-container {
+        columns: 4;
+    }
+}
