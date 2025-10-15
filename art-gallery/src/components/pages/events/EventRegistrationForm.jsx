@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import InputErrorMessage from '../../forms/input/InputErrorMessage';
 import Button from '../../forms/input/Button';
 import Spacer from '../../common/Spacer';
@@ -24,11 +24,7 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
     const [data, setData] = useState(initialData);
     const [hasErrors, setHasErrors] = useState(false);
 
-    const inputRef = useRef(null);
-
-    useEffect(() => {
-        inputRef.current.focus();
-    }, []);
+    // TODO: Add a ref to make sure firstName field is focused upon mounting
 
     const isValid = () => {
         return data.firstName && data.lastName && data.email && data.numberOfGuests;
@@ -65,7 +61,6 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                         label="First Name"
                         type="text"
                         value={data.firstName}
-                        ref={inputRef}
                         required={true}
                         handleChange={handleDataChange}
                     />

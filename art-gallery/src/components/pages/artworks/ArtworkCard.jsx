@@ -2,11 +2,18 @@ import Card from '../../common/Card';
 import Spacer from '../../common/Spacer';
 
 const ArtworkCard = ({ artwork }) => {
+    // TODO: Move helper function to Artwork class
+    // Refactor JSX to reference it as a method of artwork
+
+    const getImageURL = () => {
+        return 'https://i.ibb.co/' + artwork.imageId;
+    };
+
     return (
         <Card clickable={true}>
             <img
                 className="artwork-card-image"
-                src={artwork.getImageURL()}
+                src={getImageURL()}
                 alt={`Image of ${artwork.title} by ${artwork.artist}`}
             />
             <div className="artwork-card-text">
