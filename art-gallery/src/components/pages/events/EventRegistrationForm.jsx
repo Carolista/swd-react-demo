@@ -19,7 +19,7 @@ let errorMessages = {
 	firstNameRequired: 'First name is required.',
 	lastNameRequired: 'Last name is required.',
 	emailRequired: 'Email is required.',
-	numberOfGuestsRequired: 'The number of guests must be at least 1.',
+	numberOfGuestsRequired: 'At least 1 guest required.',
 };
 
 const EventRegistrationForm = ({ event, handleCloseForm }) => {
@@ -49,17 +49,18 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
 
 	return (
 		<>
-			<h3>REGISTER FOR THIS EVENT</h3>
-			<h5>
+			<h4>Register for This Event</h4>
+			<h6>
 				{event.title}: {event.subtitle}
-			</h5>
+			</h6>
 			<Spacer marginY="10px" />
 			<form className="register-form-grid">
 				<FormItem classes="first-name-item">
 					<TextInput
-						id={`first-name-${event.id}`}
+						id="firstName"
 						label="First Name"
 						value={data.firstName}
+                        required={true}
 						handleChange={handleDataChange}
 					/>
 					<InputErrorMessage
@@ -69,9 +70,10 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
 				</FormItem>
 				<FormItem classes="last-name-item">
 					<TextInput
-						id={`last-name-${event.id}`}
+						id="lastName"
 						label="Last Name"
 						value={data.lastName}
+                        required={true}
 						handleChange={handleDataChange}
 					/>
 					<InputErrorMessage
@@ -81,10 +83,11 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
 				</FormItem>
 				<FormItem classes="email-item">
 					<Email
-						id={`email-${event.id}`}
+						id="email"
 						classes="email"
 						label="Email Address"
 						value={data.email}
+                        required={true}
 						handleChange={handleDataChange}
 					/>
 					<InputErrorMessage
@@ -94,9 +97,10 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
 				</FormItem>
 				<FormItem classes="number-of-guests-item">
 					<NumberInput
-						id={`number-of-guests-${event.id}`}
+						id="numberOfGuests"
 						label="Number of Guests"
 						value={data.numberOfGuests}
+                        required={true}
 						handleChange={handleDataChange}
 					/>
 					<InputErrorMessage
@@ -105,14 +109,14 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
 					/>
 				</FormItem>
 				<Button
-					id={`cancel-button-${event.id}`}
+					id={`cancel-event-${event.id}`}
 					type="button"
 					label="Cancel"
 					classes="cancel cancel-register-button"
 					handleClick={handleCloseForm}
 				/>
 				<Button
-					id={`submit-button-${event.id}`}
+					id={`submit-event-${event.id}`}
 					type="submit"
 					label="Reserve Tickets"
 					classes="submit-register-button"

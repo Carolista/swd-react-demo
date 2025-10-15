@@ -4,7 +4,8 @@
 }
 
 label {
-	font-size: 1.1rem;
+	color: #666;
+	font-size: 0.9rem;
 	font-weight: 500;
 }
 
@@ -17,6 +18,12 @@ textarea {
 	min-height: 200px;
 }
 
+input,
+textarea {
+	font-size: 1rem;
+	font-family: 'Assistant', sans-serif;
+}
+
 .checkbox-with-label {
 	display: flex;
 	flex-direction: row;
@@ -25,20 +32,27 @@ textarea {
 
 .error {
 	color: #b03a2e;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 	margin: 0;
 }
 
 button {
 	color: white;
 	background-color: #1e323c;
+	font-family: 'Assistant', sans-serif;
+	font-size: 0.9rem;
+	font-weight: 500;
 	padding: 5px;
 	outline: none;
-	border: none;
+	border: 2px solid #1e323c;
 	border-radius: 4px;
 	cursor: pointer;
 }
 
 button.cancel {
-	background-color: #c66311;
+	color: #c66311;
+	background-color: white;
+	border: 2px solid #c66311;
 }
+
+/* No media queries needed for these elements */

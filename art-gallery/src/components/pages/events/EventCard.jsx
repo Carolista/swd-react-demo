@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Card from '../../common/Card';
 import EventRegistrationForm from './EventRegistrationForm';
 import Button from '../../forms/input/Button';
-import Spacer from '../../common/Spacer';
 
 const EventCard = ({ event }) => {
 	const [openForm, setOpenForm] = useState(false);
@@ -15,20 +14,20 @@ const EventCard = ({ event }) => {
 		<Card>
 			<img className="event-card-image" src={event.getImageURL()} />
 			<div>
-				<p className="title-text">{event.title}</p>
-				<p className="subtitle-text">{event.subtitle}</p>
+				<h5>{event.title}</h5>
+				<h6>{event.subtitle}</h6>
 				<p>{event.description}</p>
 			</div>
 			{event.bio && (
 				<div>
-					<p className="bio-subheader">Artist Bio</p>
+					<h6>Artist Bio</h6>
 					<p>{event.bio}</p>
 				</div>
 			)}
 			<div className="date-time-price">
-				{event.getFormattedDate()}
-				<Spacer marginX="10px" character="|" />
-				{event.getTicketPrice()}
+				<div className="date">{event.getFormattedDate()}</div>
+				<div className="time">{event.getFormattedTime()}</div>
+				<div className="price">{event.getTicketPrice()}</div>
 			</div>
 			<div className="criteria">{event.criteria}</div>
 			{openForm ? (
@@ -39,7 +38,7 @@ const EventCard = ({ event }) => {
 			) : (
 				<div className="register-button-container">
 					<Button
-						id={`register-button-event-${event.id}`}
+						id={`register-event-${event.id}`}
 						type="button"
 						label="Register"
 						handleClick={handleToggleForm}

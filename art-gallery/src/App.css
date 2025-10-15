@@ -1,20 +1,32 @@
-#root {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+html {
+	font-size: clamp(18px, 2vw, 20px); /* min, preferred, max */
+	height: 100vh;
 	box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* 
+    NOTE: For responsive design, if you define the font-size range 
+    with clamp() on the html selector as shown above, all other elements 
+    where you want the sizes to adjust similarly can be defined in terms
+    of rem (root em) and will be based on the html selector's value range.
+
+    Learn more here: https://clampcalculator.com/
+*/
+
 body {
-	position: relative;
 	background-color: white;
 	color: #1e323c;
 	font-family: 'Assistant', sans-serif;
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-	box-sizing: border-box;
 }
 
 body::before {
@@ -32,34 +44,33 @@ body::before {
 	z-index: -1;
 }
 
-main {
-	min-height: calc(100vh - 130px);
-}
-
-.main-content {
-	padding: 30px 100px;
+/* 
+    In conjunction with main { flex: 1 }, keeps footer at bottom
+    even when content does not fill page
+*/
+#body-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 header,
 footer {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 	background-color: #1e323c;
 	color: white;
 	width: 100%;
-	padding: 10px 30px;
-	box-sizing: border-box;
+	padding: 15px clamp(20px, 4vw, 30px) 20px;
 }
 
-header {
-	align-items: flex-end;
-	height: 80px;
+main {
+	flex: 1;
 }
 
-footer {
-	align-items: center;
-	min-height: 50px;
+.main-content {
+	padding: 10px clamp(20px, 4vw, 30px) 20px;
 }
 
 strong {
@@ -84,14 +95,14 @@ h6 {
 
 h1 {
 	color: #c66311;
-	font-size: 2rem;
+	font-size: 1.4rem;
 	font-weight: 700;
 }
 
 h2 {
 	color: white;
 	background-color: #c66311;
-	font-size: 1.4rem;
+	font-size: 1.1rem;
 	font-weight: 200;
 	letter-spacing: 6px;
 	width: auto;
@@ -102,24 +113,25 @@ h2 {
 
 h3 {
 	color: #1e323c;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: 700;
 }
 
 h4 {
 	color: #c66311;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 
 h5 {
-	color: #1e323c;
+	color: #c66311;
+	font-weight: 700;
 	font-size: 1.1rem;
 }
 
 h6 {
-	color: #c66311;
+	color: #1e323c;
 	font-weight: 600;
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 p {
@@ -141,30 +153,43 @@ a:active {
 
 iframe {
 	height: 450px;
-	width: calc(100% - 4px); /* border */
+	width: calc(100% - 4px); /* subtract border */
 	margin: 20px 0;
 	border: 2px solid #1e323c;
 }
 
-.icons-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 20px;
+/** MEDIA QUERIES **/
+
+/* 380-479 */
+@media screen and (min-width: 380px) {
+	/* No changes needed in this range */
 }
 
-.larger-text {
-	font-size: 1.2rem;
+/* 480-767 */
+@media screen and (min-width: 480px) {
+	/* No changes needed in this range */
 }
 
-.col-3 {
-    width: 25%;
+/* 768-1024 */
+@media screen and (min-width: 768px) {
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+        padding: 15px clamp(20px, 4vw, 30px);
+	}
 }
 
-.col-6 {
-    width: 50%;
+/* 1024-1365 */
+@media screen and (min-width: 1024px) {
+	/* No changes needed in this range */
 }
 
-.col-9 {
-    width: 75%;
+/* 1200-1365 */
+@media screen and (min-width: 1200px) {
+	/* No changes needed in this range */
+}
+
+/* 1366+ */
+@media screen and (min-width: 1366px) {
+	/* No changes needed in this range */
 }

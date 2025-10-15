@@ -2,15 +2,12 @@ import { useNavigate, useParams } from 'react-router';
 import ErrorPage from '../ErrorPage';
 import Loading from '../../common/Loading';
 import GoBack from '../../common/GoBack';
+import Spacer from '../../common/Spacer';
 
 const ArtworkDetailsPage = ({ isLoading, artworks }) => {
 	const { id } = useParams();
 
 	const navigate = useNavigate();
-
-	const handleGoToPreviousPage = () => {
-		navigate(-1);
-	};
 
 	const handleGoToArtworksPage = () => {
 		navigate('/artworks');
@@ -25,11 +22,7 @@ const ArtworkDetailsPage = ({ isLoading, artworks }) => {
 			return (
 				<ErrorPage>
 					<p>Sorry, that artwork does not exist!</p>
-					<GoBack
-						text={'Return to Previous Page'}
-						handleClick={handleGoToPreviousPage}
-					/>
-					<br />
+                    <Spacer marginY="20px" />
 					<GoBack
 						text={'View All Artworks'}
 						handleClick={handleGoToArtworksPage}
@@ -43,18 +36,24 @@ const ArtworkDetailsPage = ({ isLoading, artworks }) => {
 						text={'View All Artworks'}
 						handleClick={handleGoToArtworksPage}
 					/>
-					<h2>{artwork.title}</h2>
-					<div>
+					<h2>DETAILS</h2>
+					<div className="artwork-details-container">
+                        <div>
+                            <h5>{artwork.title}</h5>
+                        </div>
 						<div>
 							<strong>Artist: </strong>
 							{artwork.artist}
+                        </div>
+                        <div>
 							{artwork.category && (
 								<>
-									&nbsp;| <strong>Category: </strong>
+									<strong>Category: </strong>
 									{artwork.category}
 								</>
 							)}
 						</div>
+                        <Spacer marginY="10px" />
 						<div>
 							<img className="artwork-card-image" src={artwork.getImageURL()} />
 						</div>

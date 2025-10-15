@@ -1,6 +1,6 @@
 #mag {
 	font-family: 'Kodchasan', sans-serif;
-	font-size: 2.2rem;
+	font-size: 1.3rem;
 	font-weight: 200;
 	text-transform: uppercase;
 	margin: 0;
@@ -17,7 +17,7 @@
 .link:link,
 .link:visited {
 	color: rgba(255, 255, 255, 0.85);
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	font-weight: 400;
 	text-decoration: none;
 }
@@ -27,3 +27,5 @@
 	text-decoration: underline;
 	cursor: pointer;
 }
+
+/* No media queries needed for these elements */

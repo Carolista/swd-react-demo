@@ -32,11 +32,17 @@ export default class Event {
 			year: 'numeric',
 			month: 'long',
 			day: 'numeric',
+		};
+		return new Date(this.date).toLocaleDateString(lang, options);
+	};
+
+	getFormattedTime = () => {
+		let lang = 'en-US';
+		let options = {
 			hour: '2-digit',
 			minute: '2-digit',
-			timeZone: 'UTC',
 		};
-		return new Date(this.date).toLocaleString(lang, options);
+		return new Date(this.date).toLocaleTimeString(lang, options);
 	};
 
 	getTicketPrice = () => {

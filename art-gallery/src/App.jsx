@@ -11,6 +11,11 @@ import LocationPage from './components/pages/LocationPage';
 import Footer from './components/layout/Footer';
 import Event from './classes/Event';
 
+// TODO: resize all images, re-upload, and update values in local test data, 
+//  JSON on Google Drive, and eventually database
+// TODO: add alt to images
+// TODO: run through a11y checker
+
 function App() {
 	// State variables that React will pay attention to for re-rendering
 	const [isLoading, setIsLoading] = useState(true);
@@ -100,7 +105,7 @@ function App() {
 	}, [allArtworks, allEvents]);
 
 	return (
-		<>
+		<div id="body-container">
 			<Header />
 			<Routes>
 				<Route path="/" element={<HomePage />} />
@@ -122,7 +127,7 @@ function App() {
 				<Route path="*" element={<Navigate to="/" />} />
 			</Routes>
 			<Footer />
-		</>
+		</div>
 	);
 }
 
