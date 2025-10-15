@@ -4,11 +4,13 @@ A simplified version of the front end React app for the art gallery demo that wi
 
 > Students: Use the instructions in Part 1 below to create your own new React application, then reference the TODOs in the subsequent starter code branches for parts 2-5 to build it a bit at a time.
 
+Jump to: [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
+
 ---
 
 ### Part 1
 
-> There is no starter code for this part since creating the app is part of the demo!
+> There is no starter code for this part since creating the app is part of the demo! See [TODOs](#to-do) below.
 
 #### Focus
 
