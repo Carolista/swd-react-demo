@@ -1,5 +1,3 @@
-// TODO: Add Events as option
-
 const NavMenu = ({ setCurrentPage }) => {
     return (
         <div className="nav-menu">
