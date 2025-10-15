@@ -102,7 +102,7 @@ function App() {
 		if (isLoading && allArtworks !== null && allEvents !== null) {
 			setIsLoading(false);
 		}
-	}, [allArtworks, allEvents]);
+	}, [isLoading, allArtworks, allEvents]);
 
 	return (
 		<div id="body-container">
