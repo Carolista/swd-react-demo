@@ -1,3 +1,5 @@
+// TODO: Add Events as option
+
 const NavMenu = ({ setCurrentPage }) => {
     return (
         <div className="nav-menu">
@@ -16,14 +18,6 @@ const NavMenu = ({ setCurrentPage }) => {
                 }}
             >
                 Artworks
-            </span>
-            <span
-                className="link"
-                onClick={() => {
-                    setCurrentPage('events');
-                }}
-            >
-                Events
             </span>
         </div>
     );

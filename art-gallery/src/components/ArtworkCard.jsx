@@ -1,5 +1,5 @@
-import Card from '../../common/Card';
-import Spacer from '../../common/Spacer';
+import Card from './Card';
+import Spacer from './Spacer';
 
 const ArtworkCard = ({ artwork }) => {
     const getImageURL = () => {
