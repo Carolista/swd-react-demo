@@ -1,23 +1,33 @@
-import { Link } from 'react-router';
+// TODO: Remove handlers and use <Link> instead with routes
+// TODO: Add About and Location
 
-const NavMenu = () => {
+const NavMenu = ({ setCurrentPage }) => {
     return (
         <div className="nav-menu">
-            <Link className="link" to="/">
+            <span
+                className="link"
+                onClick={() => {
+                    setCurrentPage('home');
+                }}
+            >
                 Home
-            </Link>
-            <Link className="link" to="/about">
-                About
-            </Link>
-            <Link className="link" to="/artworks">
+            </span>
+            <span
+                className="link"
+                onClick={() => {
+                    setCurrentPage('artworks');
+                }}
+            >
                 Artworks
-            </Link>
-            <Link className="link" to="/events">
+            </span>
+            <span
+                className="link"
+                onClick={() => {
+                    setCurrentPage('events');
+                }}
+            >
                 Events
-            </Link>
-            <Link className="link" to="/location">
-                Location
-            </Link>
+            </span>
         </div>
     );
 };

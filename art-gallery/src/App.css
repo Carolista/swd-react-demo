@@ -151,12 +151,7 @@ a:active {
     color: #b95a0a;
 }
 
-iframe {
-    height: 450px;
-    width: calc(100% - 4px); /* subtract border */
-    margin: 20px 0;
-    border: 2px solid #1e323c;
-}
+/* TODO: Add styling for Google Maps iframe */
 
 /** MEDIA QUERIES **/
 

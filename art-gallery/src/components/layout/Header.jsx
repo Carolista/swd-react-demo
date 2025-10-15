@@ -1,12 +1,12 @@
 import NavMenu from './NavMenu';
 
-const Header = () => {
+const Header = ({ setCurrentPage }) => {
     return (
         <header>
             <div id="mag">
                 <strong>Midtown</strong> Art Gallery
             </div>
-            <NavMenu />
+            <NavMenu setCurrentPage={setCurrentPage} />
         </header>
     );
 };

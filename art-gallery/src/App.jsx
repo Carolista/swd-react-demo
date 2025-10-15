@@ -1,23 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router';
 import Artwork from './classes/Artwork';
 import Header from './components/layout/Header';
 import HomePage from './components/pages/HomePage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
-import ArtworkDetailsPage from './components/pages/artworks/ArtworkDetailsPage';
-import AboutPage from './components/pages/AboutPage';
 import EventsPage from './components/pages/events/EventsPage';
-import LocationPage from './components/pages/LocationPage';
 import Footer from './components/layout/Footer';
 import Event from './classes/Event';
 
-// TODO: resize all images, re-upload, and update values in local test data,
-//  JSON on Google Drive, and eventually database
-// TODO: add alt to images
-// TODO: run through a11y checker
-
 function App() {
     // State variables that React will pay attention to for re-rendering
+    // TODO: Delete currentPage once no longer needed
+    const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
     const [allEvents, setAllEvents] = useState(null);
@@ -100,27 +93,17 @@ function App() {
         }
     }, [isLoading, allArtworks, allEvents]);
 
+    // TODO: Convert from using currentPage to using routing
+    // TODO: Add AboutPage, ArtworkDetailsPage, LocationPage, and a default wildcard to routing options
+
     return (
         <div id="body-container">
-            <Header />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route
-                    path="/artworks"
-                    element={<ArtworksPage isLoading={isLoading} artworks={allArtworks} />}
-                />
-                <Route
-                    path="/artworks/details/:id"
-                    element={<ArtworkDetailsPage isLoading={isLoading} artworks={allArtworks} />}
-                />
-                <Route
-                    path="/events"
-                    element={<EventsPage isLoading={isLoading} events={allEvents} />}
-                />
-                <Route path="/location" element={<LocationPage />} />
-                <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
+            <Header setCurrentPage={setCurrentPage} />
+            {currentPage === 'home' && <HomePage setCurrentPage={setCurrentPage} />}
+            {currentPage === 'artworks' && (
+                <ArtworksPage isLoading={isLoading} artworks={allArtworks} />
+            )}
+            {currentPage === 'events' && <EventsPage isLoading={isLoading} events={allEvents} />}
             <Footer />
         </div>
     );

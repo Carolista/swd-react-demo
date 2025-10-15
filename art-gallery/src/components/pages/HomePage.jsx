@@ -1,13 +1,16 @@
-import { Link } from 'react-router';
+const HomePage = ({ setCurrentPage }) => {
+    // TODO: replace handler usage with Link to collection
 
-const HomePage = () => {
     return (
         <main>
             <div className="main-content">
                 <h1>Welcome!</h1>
                 <p>
-                    View our <Link to="/artworks">collection</Link> of fine art by celebrated local
-                    artists.
+                    View our{' '}
+                    <span className="link-like" onClick={() => setCurrentPage('artworks')}>
+                        collection
+                    </span>{' '}
+                    of fine art by celebrated local artists.
                 </p>
             </div>
             <img

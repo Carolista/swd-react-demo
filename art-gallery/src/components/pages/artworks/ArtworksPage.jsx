@@ -1,17 +1,14 @@
-import { Link } from 'react-router';
 import ArtworkCard from './ArtworkCard';
 import Loading from '../../common/Loading';
+
+// TODO: Link ArtworkCard to ArtworkDetailsPage for that artwork and move key attribute
 
 const ArtworksPage = ({ isLoading, artworks }) => {
     if (isLoading) {
         return <Loading dataName="artworks" />;
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
-            return (
-                <Link to={'/artworks/details/' + artwork.id} key={artwork.id}>
-                    <ArtworkCard artwork={artwork} />
-                </Link>
-            );
+            return <ArtworkCard key={artwork.id} artwork={artwork} />;
         });
         return (
             <main className="main-content">
