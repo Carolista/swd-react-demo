@@ -1,6 +1,4 @@
 const Input = ({ id, label, type, value, required, handleChange }) => {
-    // TODO: Update component to accept and place a ref
-
     return (
         <>
             <label htmlFor={id}>

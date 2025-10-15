@@ -1,10 +1,6 @@
 import ArtworkCard from './ArtworkCard';
 
-// TODO: Receive isLoading as a prop from App.jsx
-
 const ArtworksPage = ({ artworks }) => {
-    // TODO: Add logic to display Loading component if data is not yet available
-
     let artworksJSX = [...artworks].map((artwork) => {
         return <ArtworkCard key={artwork.id} artwork={artwork} />;
     });

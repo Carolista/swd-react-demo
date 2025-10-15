@@ -6,9 +6,6 @@ import Button from '../../forms/input/Button';
 const EventCard = ({ event }) => {
     const [openForm, setOpenForm] = useState(false);
 
-    // TODO: Move four helper functions to Event class
-    // Refactor JSX to reference them as methods of event
-
     const getImageURL = () => {
         return 'https://i.ibb.co/' + event.imageId;
     };

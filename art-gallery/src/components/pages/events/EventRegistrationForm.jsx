@@ -24,8 +24,6 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
     const [data, setData] = useState(initialData);
     const [hasErrors, setHasErrors] = useState(false);
 
-    // TODO: Add a ref to make sure firstName field is focused upon mounting
-
     const isValid = () => {
         return data.firstName && data.lastName && data.email && data.numberOfGuests;
     };
