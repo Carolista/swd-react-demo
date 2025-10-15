@@ -12,7 +12,11 @@ const EventCard = ({ event }) => {
 
     return (
         <Card>
-            <img className="event-card-image" src={event.getImageURL()} />
+            <img
+                className="event-card-image"
+                src={event.getImageURL()}
+                alt={'Attendees at a gallery event'}
+            />
             <div>
                 <h5>{event.title}</h5>
                 <h6>{event.subtitle}</h6>
