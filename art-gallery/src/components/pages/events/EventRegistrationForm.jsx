@@ -63,7 +63,6 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                     <Input
                         id="firstName"
                         label="First Name"
-                        type="text"
                         value={data.firstName}
                         ref={inputRef}
                         required={true}
@@ -78,7 +77,6 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                     <Input
                         id="lastName"
                         label="Last Name"
-                        type="text"
                         value={data.lastName}
                         required={true}
                         handleChange={handleDataChange}

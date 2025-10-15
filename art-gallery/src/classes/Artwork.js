@@ -9,5 +9,5 @@ export default class Artwork {
 
     getImageURL = () => {
         return 'https://i.ibb.co/' + this.imageId;
-    }
+    };
 }
