@@ -1,11 +1,11 @@
-const TextInput = ({ id, label, value, required, handleChange }) => {
+const TextInput = ({ id, label, type, value, ref, required, handleChange }) => {
     return (
         <>
             <label htmlFor={id}>
                 {label}
                 {required && '*'}
             </label>
-            <input id={id} type="text" value={value} onChange={handleChange} />
+            <input id={id} type={type || 'text'} value={value} ref={ref} onChange={handleChange} />
         </>
     );
 };

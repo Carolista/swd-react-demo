@@ -94,7 +94,9 @@ function App() {
     }, [isLoading, allArtworks, allEvents]);
 
     // TODO: Convert from using currentPage to using routing
-    // TODO: Add AboutPage, ArtworkDetailsPage, LocationPage, and a default wildcard to routing options
+    // TODO: Create and add AboutPage, ArtworkDetailsPage, and LocationPage
+    // TODO: ErrorPage also needs to be created for use in ArtworkDetailsPage
+    // TODO: Add a default wildcard to routing options
 
     return (
         <div id="body-container">
