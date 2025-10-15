@@ -1,34 +1,34 @@
 #phone-icon-container {
-	grid-area: phone;
+    grid-area: phone;
 }
 #email-icon-container {
-	grid-area: email;
+    grid-area: email;
 }
 #facebook-icon-container {
-	grid-area: facebook;
+    grid-area: facebook;
 }
 #twitter-x-icon-container {
-	grid-area: twitterX;
+    grid-area: twitterX;
 }
 #bluesky-icon-container {
-	grid-area: bluesky;
+    grid-area: bluesky;
 }
 #instagram-icon-container {
-	grid-area: instagram;
+    grid-area: instagram;
 }
 
 #contact-icons {
-	display: grid;
+    display: grid;
     justify-items: left;
-	grid-template-rows: auto;
-	grid-template-columns: auto;
-	grid-template-areas:
-		'phone'
-		'email'
-		'facebook'
-		'instagram'
-		'bluesky'
-		'twitterX';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        'phone'
+        'email'
+        'facebook'
+        'instagram'
+        'bluesky'
+        'twitterX';
     column-gap: 30px;
 }
 
@@ -36,30 +36,30 @@
 
 /* 380-479 */
 @media screen and (min-width: 380px) {
-	/* No changes needed in this range */
+    /* No changes needed in this range */
 }
 
 /* 480-767 */
 @media screen and (min-width: 480px) {
-	#contact-icons {
-		grid-template-rows: auto;
-		grid-template-columns: repeat(2, auto) 1fr;
-		grid-template-areas:
-			'phone facebook .'
-			'email instagram .'
-			'bluesky twitterX .';
-	}
+    #contact-icons {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, auto) 1fr;
+        grid-template-areas:
+            'phone facebook .'
+            'email instagram .'
+            'bluesky twitterX .';
+    }
 }
 
 /* 768-1024 */
 @media screen and (min-width: 768px) {
     #contact-icons {
-		grid-template-rows: auto;
-		grid-template-columns: repeat(3, auto) 1fr;
-		grid-template-areas:
-			'phone facebook bluesky .'
-			'email instagram twitterX .';
-	}
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, auto) 1fr;
+        grid-template-areas:
+            'phone facebook bluesky .'
+            'email instagram twitterX .';
+    }
 }
 
 /* 1024-1199 */
@@ -72,8 +72,7 @@
     #contact-icons {
         grid-template-rows: auto;
         grid-template-columns: repeat(6, auto) 1fr;
-        grid-template-areas:
-            'phone email facebook instagram bluesky twitterX .';
+        grid-template-areas: 'phone email facebook instagram bluesky twitterX .';
     }
 }
 
