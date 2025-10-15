@@ -16,6 +16,8 @@ function App() {
     // TODO: Add state variables for tracking loading state (true)
     //  and lists of artworks and events (null)
 
+    // TODO: Create classes for Artwork and Event
+
     // TODO: Write async functions to perform fetches
     //  Use try/catch/finally for error handling
 
