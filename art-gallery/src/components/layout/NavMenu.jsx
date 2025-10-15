@@ -1,6 +1,3 @@
-// TODO: Remove handlers and use <Link> instead with routes
-// TODO: Add About and Location
-
 const NavMenu = ({ setCurrentPage }) => {
     return (
         <div className="nav-menu">

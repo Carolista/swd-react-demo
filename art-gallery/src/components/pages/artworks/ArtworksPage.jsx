@@ -1,8 +1,6 @@
 import ArtworkCard from './ArtworkCard';
 import Loading from '../../common/Loading';
 
-// TODO: Link ArtworkCard to ArtworkDetailsPage for that artwork and move key attribute
-
 const ArtworksPage = ({ isLoading, artworks }) => {
     if (isLoading) {
         return <Loading dataName="artworks" />;

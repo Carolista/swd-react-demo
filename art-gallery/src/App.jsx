@@ -9,7 +9,6 @@ import Event from './classes/Event';
 
 function App() {
     // State variables that React will pay attention to for re-rendering
-    // TODO: Delete currentPage once no longer needed
     const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
@@ -92,9 +91,6 @@ function App() {
             setIsLoading(false);
         }
     }, [isLoading, allArtworks, allEvents]);
-
-    // TODO: Convert from using currentPage to using routing
-    // TODO: Add AboutPage, ArtworkDetailsPage, LocationPage, and a default wildcard to routing options
 
     return (
         <div id="body-container">
