@@ -1,6 +1,6 @@
-# swd-react-demo
+# React Demo: Art Gallery Website
 
-A simplified version of the front end React app for the art gallery demo that will be continued in Unit 2.
+A simplified version of the front end React app used as part of the art gallery Spring/Java/MySQL application that will be built in Unit 2.
 
 > Students: Use the instructions in Part 1 below to create your own new React application, then reference the TODOs in the subsequent starter code branches for parts 2-5 to build it a bit at a time.
 
@@ -70,6 +70,8 @@ Jump to: [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 
 
 > Use the `part1-solution-basics` branch to check my solution.
 
+Jump to: [Top](#react-demo-art-gallery-website) | [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
+
 ---
 
 ### Part 2
@@ -85,6 +87,8 @@ Jump to: [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 
 
 > Use the `part2-solution-state` branch to check my solution.
 
+Jump to: [Top](#react-demo-art-gallery-website) | [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
+
 ---
 
 ### Part 3
@@ -97,6 +101,8 @@ Jump to: [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 
 - Utilizing dynamic handlers
 
 > Use the `part3-solution-forms` branch to check my solution.
+
+Jump to: [Top](#react-demo-art-gallery-website) | [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
 
 ---
 
@@ -113,6 +119,8 @@ Jump to: [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 
 - Hooking into the DOM with useRef()
 
 > Use the `part4-solution-lifecycles` branch to check my solution.
+
+Jump to: [Top](#react-demo-art-gallery-website) | [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
 
 ---
 
@@ -131,3 +139,5 @@ Jump to: [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 
 > Use the `part5-solution-routing` branch to check my solution.
 
 ---
+
+Jump to: [Top](#react-demo-art-gallery-website) | [Part 1 TODOs](#to-do) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
