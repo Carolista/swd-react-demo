@@ -21,7 +21,7 @@ let errorMessages = {
 };
 
 const EventRegistrationForm = ({ event, handleCloseForm }) => {
-    const [data, setData] = useState(initialData);
+    const [data, setData] = useState({...initialData, eventId: event.id});
     const [hasErrors, setHasErrors] = useState(false);
 
     const inputRef = useRef(null);
@@ -34,19 +34,20 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
         return data.firstName && data.lastName && data.email && data.numberOfGuests;
     };
 
-    const handleDataChange = (event) => {
+    const handleDataChange = (ev) => {
         let updatedData = {
             ...data,
-            [event.target.id]: event.target.value,
+            [ev.target.id]: ev.target.value,
         };
         setData(updatedData);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
         if (!isValid()) {
             setHasErrors(true);
         } else {
+            // Eventually, submit data to back end to save to database
             handleCloseForm();
         }
     };
