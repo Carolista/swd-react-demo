@@ -7,15 +7,15 @@ import EventsPage from './components/pages/events/EventsPage';
 import Footer from './components/layout/Footer';
 import Event from './classes/Event';
 
+// TODO #1: Install react-router with npm
+
 function App() {
-    // State variables that React will pay attention to for re-rendering
-    // TODO: Delete currentPage once no longer needed
+    // TODO #13: Delete currentPage once no longer needed
     const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
     const [allEvents, setAllEvents] = useState(null);
 
-    // Async function that makes call to fetch data and handles errors
     const fetchArtworks = async () => {
         let artworks = [];
 
@@ -93,10 +93,12 @@ function App() {
         }
     }, [isLoading, allArtworks, allEvents]);
 
-    // TODO: Convert from using currentPage to using routing
-    // TODO: Create and add AboutPage, ArtworkDetailsPage, and LocationPage
-    // TODO: ErrorPage also needs to be created for use in ArtworkDetailsPage
-    // TODO: Add a default wildcard to routing options
+    // TODO #2: Convert from using currentPage to using routing for existing pages
+    // TODO #6: Create AboutPage and add route
+    // TODO #7: Create LocationPage and add route
+    // TODO #9: Create ErrorPage
+    // TODO #10: Create ArtworkDetailsPage and add dynamic routing
+    // TODO #12: Add a default wildcard to routing options
 
     return (
         <div id="body-container">

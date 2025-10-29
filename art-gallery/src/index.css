@@ -13,7 +13,7 @@
 @import url('./components/common/common.css');
 @import url('./components/forms/forms.css');
 @import url('./components/layout/layout.css');
-/* TODO: import pages.css */
+/* TODO #5: import pages.css */
 @import url('./components/pages/artworks/artworks.css');
 @import url('./components/pages/events/events.css');
 

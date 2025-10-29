@@ -1,7 +1,7 @@
 import ArtworkCard from './ArtworkCard';
 import Loading from '../../common/Loading';
 
-// TODO: Link ArtworkCard to ArtworkDetailsPage for that artwork and move key attribute
+// TODO #11: Link ArtworkCard to ArtworkDetailsPage for that artwork and move key attribute
 
 const ArtworksPage = ({ isLoading, artworks }) => {
     if (isLoading) {
