@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import Artwork from './classes/Artwork';
+import Event from './classes/Event';
 import Header from './components/layout/Header';
 import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import EventsPage from './components/pages/events/EventsPage';
-import Footer from './components/layout/Footer';
-import Event from './classes/Event';
-import AboutPage from './components/pages/AboutPage';
 import LocationPage from './components/pages/LocationPage';
+import Footer from './components/layout/Footer';
 
 // TODO #1: Install react-router with npm
 

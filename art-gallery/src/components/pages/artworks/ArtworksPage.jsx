@@ -1,11 +1,12 @@
+import LoadingPage from '../LoadingPage';
 import ArtworkCard from './ArtworkCard';
-import Loading from '../../common/Loading';
 
-// TODO #10: Link ArtworkCard to ArtworkDetailsPage for that artwork and move key attribute
+// TODO #10: Link ArtworkCard to ArtworkDetailsPage for that artwork 
+//  and move key attribute
 
 const ArtworksPage = ({ isLoading, artworks }) => {
     if (isLoading) {
-        return <Loading dataName="artworks" />;
+        return <LoadingPage dataName="artworks" />;
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
             return <ArtworkCard key={artwork.id} artwork={artwork} />;
