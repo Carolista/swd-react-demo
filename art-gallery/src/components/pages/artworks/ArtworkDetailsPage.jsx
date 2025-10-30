@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from 'react-router';
 import ErrorPage from '../ErrorPage';
-import Loading from '../../common/Loading';
 import GoBack from '../../common/GoBack';
 import Spacer from '../../common/Spacer';
+import LoadingPage from '../LoadingPage';
 
 const ArtworkDetailsPage = ({ isLoading, artworks }) => {
     const { id } = useParams();
@@ -14,7 +14,7 @@ const ArtworkDetailsPage = ({ isLoading, artworks }) => {
     };
 
     if (isLoading) {
-        return <Loading dataName="artwork" />;
+        return <LoadingPage dataName="artwork" />;
     } else {
         const artwork = artworks.find((artwork) => String(artwork.id) === id);
 
