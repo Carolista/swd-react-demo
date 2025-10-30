@@ -1,9 +1,9 @@
-import Loading from '../../common/Loading.jsx';
 import EventCard from './EventCard.jsx';
+import LoadingPage from '../LoadingPage.jsx';
 
 const EventsPage = ({ isLoading, events }) => {
     if (isLoading) {
-        return <Loading dataName="artworks" />;
+        return <LoadingPage dataName="artworks" />;
     } else {
         let eventsJSX = events.map((event) => {
             return <EventCard key={event.id} event={event} />;

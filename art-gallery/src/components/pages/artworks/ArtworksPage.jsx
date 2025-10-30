@@ -1,9 +1,9 @@
 import ArtworkCard from './ArtworkCard';
-import Loading from '../../common/Loading';
+import LoadingPage from '../LoadingPage';
 
 const ArtworksPage = ({ isLoading, artworks }) => {
     if (isLoading) {
-        return <Loading dataName="artworks" />;
+        return <LoadingPage dataName="artworks" />;
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
             return <ArtworkCard key={artwork.id} artwork={artwork} />;

@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react';
 import Artwork from './classes/Artwork';
+import Event from './classes/Event';
 import Header from './components/layout/Header';
 import HomePage from './components/pages/HomePage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import EventsPage from './components/pages/events/EventsPage';
 import Footer from './components/layout/Footer';
-import Event from './classes/Event';
 
 function App() {
-    // State variables that React will pay attention to for re-rendering
     const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
     const [allEvents, setAllEvents] = useState(null);
 
-    // Async function that makes call to fetch data and handles errors
+    // Async function will make call to fetch data and handle errors
     const fetchArtworks = async () => {
         let artworks = [];
 
@@ -46,6 +45,7 @@ function App() {
         }
     };
 
+    // Async function will make call to fetch data and handle errors
     const fetchEvents = async () => {
         let events = [];
 
@@ -81,12 +81,18 @@ function App() {
         }
     };
 
+    // Empty dependency array ensures fetch functions will be called only once
+    //  when component first mounts
     useEffect(() => {
         fetchArtworks();
         fetchEvents();
     }, []);
 
+    // Dependency array contains state variables React will 'listen' to
+    //  and will execute the anonymous function only when one of them changes value
     useEffect(() => {
+        // Change loading state only if both artworks and events are not null,
+        //  even if just empty arrays because of fetching errors
         if (isLoading && allArtworks !== null && allEvents !== null) {
             setIsLoading(false);
         }
