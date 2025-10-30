@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router';
 import Artwork from './classes/Artwork';
+import Event from './classes/Event';
 import Header from './components/layout/Header';
 import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import ArtworkDetailsPage from './components/pages/artworks/ArtworkDetailsPage';
-import AboutPage from './components/pages/AboutPage';
 import EventsPage from './components/pages/events/EventsPage';
 import LocationPage from './components/pages/LocationPage';
 import Footer from './components/layout/Footer';
-import Event from './classes/Event';
 
 function App() {
-    // State variables that React will pay attention to for re-rendering
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
     const [allEvents, setAllEvents] = useState(null);
 
-    // Async function that makes call to fetch data and handles errors
     const fetchArtworks = async () => {
         let artworks = [];
 

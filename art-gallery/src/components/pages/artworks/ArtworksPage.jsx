@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
+import LoadingPage from '../LoadingPage';
 import ArtworkCard from './ArtworkCard';
-import Loading from '../../common/Loading';
 
 const ArtworksPage = ({ isLoading, artworks }) => {
     if (isLoading) {
-        return <Loading dataName="artworks" />;
+        return <LoadingPage dataName="artworks" />;
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
             return (
