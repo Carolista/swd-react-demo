@@ -2,8 +2,8 @@ import Card from '../../common/Card';
 import Spacer from '../../common/Spacer';
 
 const ArtworkCard = ({ artwork }) => {
-    // TODO: Move helper function to Artwork class
-    // Refactor JSX to reference it as a method of artwork
+    // TODO #1b: Move helper function to Artwork class
+    // TODO #1c: Refactor JSX below to reference it as a method of artwork
 
     const getImageURL = () => {
         return 'https://i.ibb.co/' + artwork.imageId;

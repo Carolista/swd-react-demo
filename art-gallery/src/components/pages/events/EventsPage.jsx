@@ -1,9 +1,11 @@
 import EventCard from './EventCard.jsx';
 
-// TODO: Receive isLoading as prop from App.jsx
+// TODO #7a: Receive isLoading as prop from App.jsx
 
 const EventsPage = ({ events }) => {
-    // TODO: Add logic to display Loading component if data is not yet available
+    // TODO #7b: Add logic to return LoadingPage if data is not yet available
+    //  (Test visually by passing down an empty array for events in App.jsx 
+    //  since routing is not yet in place.)
 
     let eventsJSX = events.map((event) => {
         return <EventCard key={event.id} event={event} />;

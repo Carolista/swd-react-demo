@@ -24,7 +24,7 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
     const [data, setData] = useState({...initialData, eventId: event.id});
     const [hasErrors, setHasErrors] = useState(false);
 
-    // TODO: Add a ref to make sure firstName field is focused upon mounting
+    // TODO #8a: Add a ref to make sure firstName field is focused upon mounting
 
     const isValid = () => {
         return data.firstName && data.lastName && data.email && data.numberOfGuests;
@@ -57,6 +57,7 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
             <Spacer marginY="10px" />
             <form className="register-form-grid">
                 <FormItem classes="first-name-item">
+                    {/* TODO #8d: Pass ref down to this input only */}
                     <Input
                         id="firstName"
                         label="First Name"
