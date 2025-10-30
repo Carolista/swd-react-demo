@@ -1,4 +1,4 @@
-import Spinner from './Spinner.jsx';
+import Spinner from '../common/Spinner';
 
 const LoadingPage = ({ dataName }) => {
     let data = dataName || 'data';
