@@ -1,5 +1,4 @@
-// TODO #4: Remove handlers and use <Link> instead with routes
-// TODO #8: Add About and Location
+// TODO #5: Remove handlers and use <Link> instead with routes
 
 const NavMenu = ({ setCurrentPage }) => {
     return (
@@ -11,6 +10,14 @@ const NavMenu = ({ setCurrentPage }) => {
                 }}
             >
                 Home
+            </span>
+            <span
+                className="link"
+                onClick={() => {
+                    setCurrentPage('about');
+                }}
+            >
+                About
             </span>
             <span
                 className="link"
@@ -27,6 +34,14 @@ const NavMenu = ({ setCurrentPage }) => {
                 }}
             >
                 Events
+            </span>
+            <span
+                className="link"
+                onClick={() => {
+                    setCurrentPage('location');
+                }}
+            >
+                Location
             </span>
         </div>
     );

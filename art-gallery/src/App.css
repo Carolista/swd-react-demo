@@ -151,7 +151,12 @@ a:active {
     color: #b95a0a;
 }
 
-/* TODO #7: Add styling for Google Maps iframe */
+iframe {
+    height: 450px;
+    width: calc(100% - 4px); /* subtract border */
+    margin: 20px 0;
+    border: 2px solid #1e323c;
+}
 
 /** MEDIA QUERIES **/
 

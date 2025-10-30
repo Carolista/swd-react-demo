@@ -6,11 +6,13 @@ import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import EventsPage from './components/pages/events/EventsPage';
 import Footer from './components/layout/Footer';
 import Event from './classes/Event';
+import AboutPage from './components/pages/AboutPage';
+import LocationPage from './components/pages/LocationPage';
 
 // TODO #1: Install react-router with npm
 
 function App() {
-    // TODO #13: Delete currentPage once no longer needed
+    // TODO #6: Delete currentPage once no longer needed
     const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
@@ -93,21 +95,21 @@ function App() {
         }
     }, [isLoading, allArtworks, allEvents]);
 
-    // TODO #2: Convert from using currentPage to using routing for existing pages
-    // TODO #6: Create AboutPage and add route
-    // TODO #7: Create LocationPage and add route
-    // TODO #9: Create ErrorPage
-    // TODO #10: Create ArtworkDetailsPage and add dynamic routing
-    // TODO #12: Add a default wildcard to routing options
+    // TODO #3: Convert from using currentPage to using routing for existing pages
+    // TODO #7: Add a default wildcard to routing options
+    // TODO #8: Create ArtworkDetailsPage 
+    // TODO #9: Add dynamic routing for ArtworkDetailsPage below
 
     return (
         <div id="body-container">
             <Header setCurrentPage={setCurrentPage} />
             {currentPage === 'home' && <HomePage setCurrentPage={setCurrentPage} />}
+            {currentPage === 'about' && <AboutPage />}
             {currentPage === 'artworks' && (
                 <ArtworksPage isLoading={isLoading} artworks={allArtworks} />
             )}
             {currentPage === 'events' && <EventsPage isLoading={isLoading} events={allEvents} />}
+            {currentPage === 'location' && <LocationPage />}
             <Footer />
         </div>
     );
