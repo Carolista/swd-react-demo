@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router';
 import ErrorPage from '../ErrorPage';
-import Loading from '../../common/Loading';
+import Loading from '../LoadingPage';
 import GoBack from '../../common/GoBack';
 import Spacer from '../../common/Spacer';
 

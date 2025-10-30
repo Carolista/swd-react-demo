@@ -1,6 +1,6 @@
-import Spinner from './Spinner.jsx';
+import Spinner from '../common/Spinner.jsx';
 
-const Loading = ({ dataName }) => {
+const LoadingPage = ({ dataName }) => {
     let data = dataName || 'data';
 
     return (
@@ -12,4 +12,4 @@ const Loading = ({ dataName }) => {
     );
 };
 
-export default Loading;
+export default LoadingPage;

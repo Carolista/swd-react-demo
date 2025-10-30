@@ -12,12 +12,10 @@ import Footer from './components/layout/Footer';
 import Event from './classes/Event';
 
 function App() {
-    // State variables that React will pay attention to for re-rendering
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
     const [allEvents, setAllEvents] = useState(null);
 
-    // Async function that makes call to fetch data and handles errors
     const fetchArtworks = async () => {
         let artworks = [];
 
