@@ -11,16 +11,16 @@ Jump to: [Part 1](#part-1) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#p
 ## Preview
 
 ### Home Page
-<img width="600" alt="Midtown Art Gallery mock website - Home Page at tablet size" src="https://github.com/user-attachments/assets/34fd7ba2-bbc9-4bb4-ab74-13fb29e0e161" />
+<img width="600" alt="Midtown Art Gallery mock website - Home Page at tablet size" src="preview/home-page.png" />
 
 ### Artworks Page
-<img width="600" alt="Screenshot 2025-10-16 at 3 49 56 PM" src="https://github.com/user-attachments/assets/d3b4bba0-6f4b-4b8a-bda7-9b3478fa413e" />
+<img width="600" alt="Midtown Art Gallery mock website - Artworks Page at desktop size" src="preview/artworks-page.png" />
 
 ### Events Page with Registration Form
-<img width="600" alt="Screenshot 2025-10-16 at 3 51 44 PM" src="https://github.com/user-attachments/assets/2cb769a4-5e5f-4710-91f5-2e18cd97448e" />
+<img width="600" alt="Midtown Art Gallery mock website - Events Page at tablet size" src="preview/events-page.png" />
 
 ### Location Page
-<img width="600" alt="Screenshot 2025-10-16 at 3 52 01 PM" src="https://github.com/user-attachments/assets/8ecbd1da-da86-453f-a09d-2b7b1ca096ef" /> 
+<img width="600" alt="Midtown Art Gallery mock website - Location Page at desktop size" src="preview/location-page.png" /> 
 
 ---
 
