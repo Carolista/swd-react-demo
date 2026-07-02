@@ -3,7 +3,7 @@ import EventCard from './EventCard.jsx';
 
 const EventsPage = ({ isLoading, events }) => {
     if (isLoading) {
-        return <LoadingPage dataName="artworks" />;
+        return <LoadingPage dataName="events" />;
     } else {
         let eventsJSX = events.map((event) => {
             return <EventCard key={event.id} event={event} />;
