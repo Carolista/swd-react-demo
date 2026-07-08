@@ -2,7 +2,20 @@
     /* masonry layout */
     columns: 1;
     column-gap: 15px;
-    margin-top: 20px;
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.artwork-card-item {
+    break-inside: avoid;
+    list-style: none;
+}
+
+.card-link,
+.card-link:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .artwork-details-container {
@@ -23,25 +36,39 @@
     text-align: center;
 }
 
-.artwork-card-text > h5 {
+.artwork-card-title {
+    color: #c66311;
+    font-weight: 700;
+    font-size: 1.1rem;
     margin-bottom: 4px;
 }
 
-.artwork-card-text > h6 {
+.artwork-card-artist {
+    color: #1e323c;
+    font-weight: 600;
+    font-size: 1rem;
     margin-top: 0;
 }
 
+.artwork-details-heading {
+    color: white;
+    background-color: #c66311;
+    font-size: 1.1rem;
+    font-weight: 200;
+    letter-spacing: 6px;
+    width: auto;
+    border-radius: 2px;
+    padding: 5px 8px;
+    margin: 20px 0;
+}
+
+.artwork-details-title {
+    color: #c66311;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
 /** MEDIA QUERIES **/
-
-/* 380-479 */
-@media screen and (min-width: 380px) {
-    /* No changes needed in this range */
-}
-
-/* 480-767 */
-@media screen and (min-width: 480px) {
-    /* No changes needed in this range */
-}
 
 /* 768-1024 */
 @media screen and (min-width: 768px) {
@@ -57,14 +84,11 @@
     }
 }
 
-/* 1200-1365 */
-@media screen and (min-width: 1200px) {
-    /* No changes needed in this range */
-}
-
 /* 1366+ */
 @media screen and (min-width: 1366px) {
     .artwork-card-container {
         columns: 4;
     }
 }
+
+/* See index.css for a list of all breakpoints. */

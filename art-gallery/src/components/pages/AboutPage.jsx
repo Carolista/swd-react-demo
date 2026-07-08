@@ -35,7 +35,9 @@ const AboutPage = () => {
                     discover their next favorite local artist right here in Midtown.
                 </p>
             </div>
-            <img src="/images/gallery-about.jpeg" width="100%" alt="Upper Gallery" />
+            <figure className="hero-figure">
+                <img className="hero-image" src="/images/gallery-about.jpeg" alt="Upper Gallery" />
+            </figure>
         </main>
     );
 };

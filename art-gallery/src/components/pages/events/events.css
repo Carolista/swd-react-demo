@@ -2,12 +2,32 @@
     /* masonry layout */
     columns: 1;
     column-gap: 15px;
-    margin-top: 20px;
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.event-card-item {
+    break-inside: avoid;
+    list-style: none;
 }
 
 .event-card-image {
     width: 100%;
     margin-bottom: 8px;
+}
+
+.event-card-title {
+    color: #c66311;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.event-card-subtitle,
+.event-card-bio-heading {
+    color: #1e323c;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .criteria {
@@ -178,3 +198,5 @@
             '. cancel submit';
     }
 }
+
+/* See index.css for a list of all breakpoints. */

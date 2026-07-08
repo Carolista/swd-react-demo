@@ -10,11 +10,13 @@ const HomePage = () => {
                     artists.
                 </p>
             </div>
-            <img
-                src="/images/gallery-home.jpeg"
-                width="100%"
-                alt="Main Entry of Midtown Art Gallery"
-            />
+            <figure className="hero-figure">
+                <img
+                    className="hero-image"
+                    src="/images/gallery-home.jpeg"
+                    alt="Main Entry of Midtown Art Gallery"
+                />
+            </figure>
         </main>
     );
 };

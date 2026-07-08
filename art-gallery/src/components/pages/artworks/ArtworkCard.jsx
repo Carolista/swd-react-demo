@@ -10,8 +10,8 @@ const ArtworkCard = ({ artwork }) => {
                 alt={`Image of ${artwork.title} by ${artwork.artist}`}
             />
             <div className="artwork-card-text">
-                <h5>{artwork.title}</h5>
-                <h6>{artwork.artist}</h6>
+                <h3 className="artwork-card-title">{artwork.title}</h3>
+                <p className="artwork-card-artist">{artwork.artist}</p>
             </div>
             <Spacer marginY="10px" />
         </Card>
