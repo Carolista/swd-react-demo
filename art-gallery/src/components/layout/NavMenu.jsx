@@ -1,4 +1,6 @@
 const NavMenu = ({ setCurrentPage }) => {
+    // Temporary pre-router navigation for instruction.
+    // This handler-based approach is replaced with Link components in Part 5.
     return (
         <div className="nav-menu">
             <span

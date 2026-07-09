@@ -10,6 +10,19 @@
     margin-bottom: 8px;
 }
 
+.event-card-title {
+    color: #c66311;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.event-card-subtitle,
+.event-card-bio-heading {
+    color: #1e323c;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 .criteria {
     font-style: italic;
     margin-bottom: 20px;
@@ -178,3 +191,5 @@
             '. cancel submit';
     }
 }
+
+/* See index.css for a list of all breakpoints. */

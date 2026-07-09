@@ -1,9 +1,16 @@
 import ArtworkCard from './ArtworkCard';
 import LoadingPage from '../LoadingPage';
 
-const ArtworksPage = ({ isLoading, artworks }) => {
+const ArtworksPage = ({ isLoading, artworks, artworksError }) => {
     if (isLoading) {
         return <LoadingPage dataName="artworks" />;
+    } else if (artworksError) {
+        return (
+            <main className="main-content">
+                <h1>Artworks</h1>
+                <p>{artworksError}</p>
+            </main>
+        );
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
             return <ArtworkCard key={artwork.id} artwork={artwork} />;

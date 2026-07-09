@@ -1,9 +1,16 @@
 import EventCard from './EventCard.jsx';
 import LoadingPage from '../LoadingPage.jsx';
 
-const EventsPage = ({ isLoading, events }) => {
+const EventsPage = ({ isLoading, events, eventsError }) => {
     if (isLoading) {
-        return <LoadingPage dataName="artworks" />;
+        return <LoadingPage dataName="events" />;
+    } else if (eventsError) {
+        return (
+            <main className="main-content">
+                <h1>Upcoming Events</h1>
+                <p>{eventsError}</p>
+            </main>
+        );
     } else {
         let eventsJSX = events.map((event) => {
             return <EventCard key={event.id} event={event} />;
