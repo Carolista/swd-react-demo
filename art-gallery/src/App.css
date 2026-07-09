@@ -31,7 +31,7 @@ body {
 
 body::before {
     /* Photo credit: https://www.pexels.com/@gdtography-277628/ */
-    background-image: url('https://i.ibb.co/TD6fmXWK/white-installation.jpg');
+    background-image: url('assets/images/white-installation.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     content: ''; /* Essential for ::before to be rendered */
