@@ -161,6 +161,30 @@ iframe {
     border: 2px solid #1e323c;
 }
 
+.link-like {
+    color: #c66311;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-like-button {
+    color: #c66311;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.link-like-button:hover,
+.link-like-button:active {
+    color: #b95a0a;
+}
+
 /** MEDIA QUERIES **/
 
 /* 768-1024 */
