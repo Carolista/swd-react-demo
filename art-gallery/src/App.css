@@ -142,7 +142,7 @@ address {
     font-style: normal;
 }
 
-a {
+a, .link-like {
     color: #c66311;
     font-weight: bold;
     text-decoration: none;
@@ -152,20 +152,6 @@ a {
 a:hover,
 a:active {
     color: #b95a0a;
-}
-
-iframe {
-    height: 450px;
-    width: calc(100% - 4px); /* subtract border */
-    margin: 20px 0;
-    border: 2px solid #1e323c;
-}
-
-.link-like {
-    color: #c66311;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .link-like-button {
@@ -183,6 +169,13 @@ iframe {
 .link-like-button:hover,
 .link-like-button:active {
     color: #b95a0a;
+}
+
+iframe {
+    height: 450px;
+    width: calc(100% - 4px); /* subtract border */
+    margin: 20px 0;
+    border: 2px solid #1e323c;
 }
 
 /** MEDIA QUERIES **/
