@@ -1,6 +1,7 @@
-// TODO #5: Remove handlers and use <Link> instead with routes
-
+// Temporary pre-router navigation uses currentPage plus prop drilling 
+// via setCurrentPage; this will be replaced by React Router in Part 5.
 const NavMenu = ({ setCurrentPage }) => {
+    // TODO #5: Remove handlers, currentPage prop, and use <Link> instead with routes
     return (
         <div className="nav-menu">
             <span

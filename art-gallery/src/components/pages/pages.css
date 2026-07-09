@@ -17,6 +17,16 @@
     grid-area: instagram;
 }
 
+.error-page-subheading {
+    color: #1e323c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    background-color: transparent;
+    padding: 0;
+    margin: 12px 0 0;
+}
+
 #contact-icons {
     display: grid;
     justify-items: left;
@@ -33,11 +43,6 @@
 }
 
 /** MEDIA QUERIES **/
-
-/* 380-479 */
-@media screen and (min-width: 380px) {
-    /* No changes needed in this range */
-}
 
 /* 480-767 */
 @media screen and (min-width: 480px) {
@@ -62,11 +67,6 @@
     }
 }
 
-/* 1024-1199 */
-@media screen and (min-width: 1024px) {
-    /* No changes needed in this range */
-}
-
 /* 1200-1365 */
 @media screen and (min-width: 1200px) {
     #contact-icons {
@@ -76,12 +76,4 @@
     }
 }
 
-/* 1366-1599 */
-@media screen and (min-width: 1366px) {
-    /* No changes needed in this range */
-}
-
-/* 1600+ */
-@media screen and (min-width: 1600px) {
-    /* No changes needed in this range */
-}
+/* See index.css for a list of all breakpoints. */

@@ -1,9 +1,20 @@
 import LoadingPage from '../LoadingPage.jsx';
+import ErrorPage from '../ErrorPage.jsx';
+import GoBack from '../../common/GoBack.jsx';
+import Spacer from '../../common/Spacer.jsx';
 import EventCard from './EventCard.jsx';
 
-const EventsPage = ({ isLoading, events }) => {
+const EventsPage = ({ isLoading, events, eventsError, setCurrentPage }) => {
     if (isLoading) {
-        return <LoadingPage dataName="artworks" />;
+        return <LoadingPage dataName="events" />;
+    } else if (eventsError) {
+        return (
+            <ErrorPage>
+                <p>{eventsError}</p>
+                <Spacer marginY="20px" />
+                <GoBack text={'Return Home'} handleClick={() => setCurrentPage('home')} />
+            </ErrorPage>
+        );
     } else {
         let eventsJSX = events.map((event) => {
             return <EventCard key={event.id} event={event} />;
