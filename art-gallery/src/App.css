@@ -161,7 +161,6 @@ iframe {
     border: 2px solid #1e323c;
 }
 
-
 .link-like {
     color: #c66311;
     font-weight: 700;
@@ -179,6 +178,11 @@ iframe {
     padding: 0;
     border: none;
     cursor: pointer;
+}
+
+.link-like-button:hover,
+.link-like-button:active {
+    color: #b95a0a;
 }
 
 /** MEDIA QUERIES **/
