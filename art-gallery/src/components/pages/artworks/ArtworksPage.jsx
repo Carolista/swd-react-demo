@@ -1,11 +1,15 @@
 import ArtworkCard from './ArtworkCard';
 
 // TODO #4a: Receive isLoading as a prop from App.jsx
+// TODO #4c: Receive artworksError as a prop from App.jsx
 
 const ArtworksPage = ({ artworks }) => {
     // TODO #4b: Add logic to return LoadingPage if data is not yet available
     //  (Test visually by passing down an empty array for artworks in App.jsx 
     //  since routing is not yet in place.)
+    // TODO #4d: Add logic to return ErrorPage if artworksError has a message
+    //  Include message in a <p> and a GoBack control that sends user to Home
+    //  (use setCurrentPage since routing is not yet in place).
 
     let artworksJSX = [...artworks].map((artwork) => {
         return <ArtworkCard key={artwork.id} artwork={artwork} />;
