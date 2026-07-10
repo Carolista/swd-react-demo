@@ -31,7 +31,7 @@ body {
 
 body::before {
     /* Photo credit: https://www.pexels.com/@gdtography-277628/ */
-    background-image: url('https://i.ibb.co/TD6fmXWK/white-installation.jpg');
+    background-image: url('./assets/images/white-installation.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     content: ''; /* Essential for ::before to be rendered */
@@ -153,16 +153,6 @@ a:active {
 
 /** MEDIA QUERIES **/
 
-/* 380-479 */
-@media screen and (min-width: 380px) {
-    /* No changes needed in this range */
-}
-
-/* 480-767 */
-@media screen and (min-width: 480px) {
-    /* No changes needed in this range */
-}
-
 /* 768-1024 */
 @media screen and (min-width: 768px) {
     header {
@@ -172,17 +162,4 @@ a:active {
     }
 }
 
-/* 1024-1365 */
-@media screen and (min-width: 1024px) {
-    /* No changes needed in this range */
-}
-
-/* 1200-1365 */
-@media screen and (min-width: 1200px) {
-    /* No changes needed in this range */
-}
-
-/* 1366+ */
-@media screen and (min-width: 1366px) {
-    /* No changes needed in this range */
-}
+/* See index.css for a list of all breakpoints. */
