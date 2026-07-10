@@ -1,7 +1,7 @@
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ArtworkCard from './components/ArtworkCard.jsx';
-import { mockArtworks } from '../src/test-data/mockArtworks.js';
+import { mockArtworks } from './test-data/mockArtworks.js';
 
 function App() {
     let artworksJSX = [...mockArtworks].map((artwork) => {
