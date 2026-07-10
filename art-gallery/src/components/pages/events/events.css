@@ -15,6 +15,28 @@
     margin-bottom: 20px;
 }
 
+.event-card-title {
+    color: #c66311;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.event-card-subtitle,
+.event-card-bio-heading {
+    color: #1e323c;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.event-registration-event-title {
+    color: #1e323c;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: none;
+}
+
 .register-button-container {
     display: flex;
     justify-content: flex-end;
@@ -178,3 +200,5 @@
             '. cancel submit';
     }
 }
+
+/* See index.css for a list of all breakpoints. */

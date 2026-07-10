@@ -35,7 +35,7 @@ const EventCard = ({ event }) => {
     };
 
     const handleToggleForm = () => {
-        setOpenForm(!openForm);
+        setOpenForm((prevOpenForm) => !prevOpenForm);
     };
 
     return (
@@ -46,13 +46,13 @@ const EventCard = ({ event }) => {
                 alt={'Attendees at a gallery event'}
             />
             <div>
-                <h5>{event.title}</h5>
-                <h6>{event.subtitle}</h6>
+                <h3 className="event-card-title">{event.title}</h3>
+                <h4 className="event-card-subtitle">{event.subtitle}</h4>
                 <p>{event.description}</p>
             </div>
             {event.bio && (
                 <div>
-                    <h6>Artist Bio</h6>
+                    <h4 className="event-card-bio-heading">Artist Bio</h4>
                     <p>{event.bio}</p>
                 </div>
             )}

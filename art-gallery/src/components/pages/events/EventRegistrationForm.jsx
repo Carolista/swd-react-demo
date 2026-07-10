@@ -5,15 +5,15 @@ import Spacer from '../../common/Spacer';
 import FormItem from '../../forms/FormItem';
 import Input from '../../forms/input/Input';
 
-let initialData = {
+const initialData = {
     eventId: null,
     firstName: '',
     lastName: '',
     email: '',
-    numberOfGuests: 0,
+    numberOfGuests: '',
 };
 
-let errorMessages = {
+const errorMessages = {
     firstNameRequired: 'First name is required.',
     lastNameRequired: 'Last name is required.',
     emailRequired: 'Email is required.',
@@ -21,23 +21,23 @@ let errorMessages = {
 };
 
 const EventRegistrationForm = ({ event, handleCloseForm }) => {
-    const [data, setData] = useState({...initialData, eventId: event.id});
+    const [data, setData] = useState({ ...initialData, eventId: event.id });
     const [hasErrors, setHasErrors] = useState(false);
 
     const isValid = () => {
-        return data.firstName && data.lastName && data.email && data.numberOfGuests;
+        return data.firstName && data.lastName && data.email && Number(data.numberOfGuests) >= 1;
     };
 
-    const handleDataChange = (ev) => {
-        let updatedData = {
-            ...data,
-            [ev.target.id]: ev.target.value,
-        };
-        setData(updatedData);
+    const handleDataChange = (domEvent) => {
+        const { id, value } = domEvent.target;
+        setData((prevData) => ({
+            ...prevData,
+            [id]: value,
+        }));
     };
 
-    const handleSubmit = (ev) => {
-        ev.preventDefault();
+    const handleSubmit = (domEvent) => {
+        domEvent.preventDefault();
         if (!isValid()) {
             setHasErrors(true);
         } else {
@@ -49,9 +49,9 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
     return (
         <>
             <h4>Register for This Event</h4>
-            <h6>
+            <h5 className="event-registration-event-title">
                 {event.title}: {event.subtitle}
-            </h6>
+            </h5>
             <Spacer marginY="10px" />
             <form className="register-form-grid">
                 <FormItem classes="first-name-item">
@@ -101,12 +101,13 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
                         id="numberOfGuests"
                         label="Number of Guests"
                         type="number"
+                        min="1"
                         value={data.numberOfGuests}
                         required={true}
                         handleChange={handleDataChange}
                     />
                     <InputErrorMessage
-                        hasError={hasErrors && data.numberOfGuests === 0}
+                        hasError={hasErrors && Number(data.numberOfGuests) < 1}
                         msg={errorMessages['numberOfGuestsRequired']}
                     />
                 </FormItem>
