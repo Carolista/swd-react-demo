@@ -7,6 +7,8 @@ import { mockArtworks } from '../src/test-data/mockArtworks.js';
 
 function App() {
     // State variables that React will pay attention to for re-rendering
+    // Temporary pre-router navigation uses currentPage plus prop drilling
+    // via setCurrentPage; this will be replaced by React Router in Part 5.
     const [currentPage, setCurrentPage] = useState('home');
 
     return (
