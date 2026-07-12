@@ -1,3 +1,5 @@
+// Temporary pre-router navigation uses currentPage plus prop drilling
+// via setCurrentPage; this will be replaced by React Router in Part 5.
 const NavMenu = ({ setCurrentPage }) => {
     return (
         <div className="nav-menu">
