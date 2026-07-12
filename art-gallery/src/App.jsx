@@ -8,6 +8,8 @@ import { mockArtworks } from './test-data/mockArtworks.js';
 import { mockEvents } from './test-data/mockEvents.js';
 
 function App() {
+    // Temporary pre-router navigation uses currentPage plus prop drilling
+    // via setCurrentPage; this will be replaced by React Router in Part 5.
     const [currentPage, setCurrentPage] = useState('home');
 
     return (
