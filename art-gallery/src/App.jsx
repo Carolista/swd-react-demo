@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router';
 import Artwork from './classes/Artwork';
+import Event from './classes/Event';
 import Header from './components/layout/Header';
 import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import ArtworkDetailsPage from './components/pages/artworks/ArtworkDetailsPage';
-import AboutPage from './components/pages/AboutPage';
 import EventsPage from './components/pages/events/EventsPage';
 import LocationPage from './components/pages/LocationPage';
 import Footer from './components/layout/Footer';
-import Event from './classes/Event';
 
 const parseJSONText = (rawText, dataName) => {
     try {

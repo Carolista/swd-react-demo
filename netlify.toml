@@ -1,0 +1,5 @@
+[build]
+    base = "art-gallery"
+    command = "npm run build"
+    publish = "dist"
+    
