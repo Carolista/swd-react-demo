@@ -1,26 +1,28 @@
 # React Demo: Art Gallery Website
 
-A simplified version of the front end React app used as part of the art gallery Spring/Java/MySQL application that will be built in Unit 2. Many thanks to the students and staff who contributed to the project with their original artworks!
-
-> Students: Use the instructions in Part 1 below to create your own new React application, then reference the TODOs in the subsequent starter code branches for parts 2-5 to build it a bit at a time.
-
-Jump to: [Part 1](#part-1) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)
+This is a basic version of the front end React app for the art gallery demo that will be continued in Unit 2.
 
 ---
 
-## Preview
+## Branch Flow
 
-### Home Page
-<img width="600" alt="Midtown Art Gallery mock website - Home Page at tablet size" src="preview/home-page.png" />
+> [!NOTE]
+> The `main` branch has the finished project and is not a starting point. Part 1 begins with creating a brand new ReactJS/Vite project, which you can do in a separate branch after forking and cloning or you can start a separate repository altogether.
 
-### Artworks Page
-<img width="600" alt="Midtown Art Gallery mock website - Artworks Page at desktop size" src="preview/artworks-page.png" />
+### Recommended order:
 
-### Events Page with Registration Form
-<img width="600" alt="Midtown Art Gallery mock website - Events Page at tablet size" src="preview/events-page.png" />
+1. [Part 1 instructions]() for creating the project -> `part1-solution-basics`
+2. `part2-starter-state` -> `part2-solution-state`
+3. `part3-starter-forms` -> `part3-solution-forms`
+4. `part4-starter-lifecycles` -> `part4-solution-lifecycles`
+5. `part5-starter-routing` -> `part5-solution-routing`
 
-### Location Page
-<img width="600" alt="Midtown Art Gallery mock website - Location Page at desktop size" src="preview/location-page.png" /> 
+### Sequencing Notes
+
+- The temporary `currentPage` state + prop drilling approach in Part 2 is intentional before routing is introduced in Part 5.
+- Form handling is intentionally introduced in Part 3 before external data-fetching in Part 4.
+- Loading and error handling with async fetch is intentionally covered together in Part 4.
+- React Router is intentionally delayed until Part 5.
 
 ---
 
@@ -35,7 +37,7 @@ Jump to: [Part 1](#part-1) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#p
 - Creating some components for composing pages
 - Adding temporary hard-coded content and structure with basic HTML
 - Incorporating CSS & responsive layouts after content is in place
-- Loop over lists with .map() to produce multiple instances of JSX or minor components
+- Looping over lists with `.map()` to produce repeated JSX
 - Storing test data and passing data through props
 
 ### TO DO
@@ -98,7 +100,7 @@ Jump to: [Top](#react-demo-art-gallery-website) | [Part 1 TODOs](#to-do) | [Part
 
 - Implementing conditional rendering within JSX with ternary operators (`?` and `:`) and logical AND operator (`&&`)
 - Utilizing the `useState()` hook for state variables that will trigger re-rendering if their values change
-- Lifting state to parent
+- Lifting state to parent components
 - Passing event handlers with props
 
 > Use the `part2-solution-state` branch to check my solution.
@@ -113,8 +115,9 @@ Jump to: [Top](#react-demo-art-gallery-website) | [Part 1](#part-1) | [Part 2](#
 
 ### Focus
 
-- Managing form data with React
-- Utilizing dynamic handlers
+- Managing controlled form data with React state
+- Utilizing dynamic handlers for multiple inputs
+- Performing basic client-side validation
 
 > Use the `part3-solution-forms` branch to check my solution.
 
@@ -128,11 +131,11 @@ Jump to: [Top](#react-demo-art-gallery-website) | [Part 1](#part-1) | [Part 2](#
 
 ### Focus
 
-- Fetching data from an external API
+- Fetching data from an external API with modern `async`/`await` syntax
 - Tapping into component lifecycles with the `useEffect()` hook
-- Manage race conditions when data is loading
+- Managing loading state and race conditions during asynchronous requests
 - Handling errors with `try`/`catch`/`finally`
-- Hooking into the DOM with useRef()
+- Hooking into the DOM with the `useRef()` hook
 
 > Use the `part4-solution-lifecycles` branch to check my solution.
 
@@ -153,7 +156,3 @@ Jump to: [Top](#react-demo-art-gallery-website) | [Part 1](#part-1) | [Part 2](#
 - Leveraging the `useNavigate()` hook for re-routing from a component (without the user clicking a link)
 
 > Use the `part5-solution-routing` branch to check my solution.
-
----
-
-Jump to: [Top](#react-demo-art-gallery-website) | [Part 1](#part-1) | [Part 2](#part-2) | [Part 3](#part-3) | [Part 4](#part-4) | [Part 5](#part-5)

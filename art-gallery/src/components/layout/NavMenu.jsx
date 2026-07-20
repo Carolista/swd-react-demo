@@ -2,23 +2,35 @@ import { Link } from 'react-router';
 
 const NavMenu = () => {
     return (
-        <div className="nav-menu">
-            <Link className="link" to="/">
-                Home
-            </Link>
-            <Link className="link" to="/about">
-                About
-            </Link>
-            <Link className="link" to="/artworks">
-                Artworks
-            </Link>
-            <Link className="link" to="/events">
-                Events
-            </Link>
-            <Link className="link" to="/location">
-                Location
-            </Link>
-        </div>
+        <nav>
+            <ul className="nav-menu">
+                <li>
+                    <Link className="link" to="/">
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link className="link" to="/about">
+                        About
+                    </Link>
+                </li>
+                <li>
+                    <Link className="link" to="/artworks">
+                        Artworks
+                    </Link>
+                </li>
+                <li>
+                    <Link className="link" to="/events">
+                        Events
+                    </Link>
+                </li>
+                <li>
+                    <Link className="link" to="/location">
+                        Location
+                    </Link>
+                </li>
+            </ul>
+        </nav>
     );
 };
 

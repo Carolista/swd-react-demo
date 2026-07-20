@@ -1,23 +1,42 @@
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import LoadingPage from '../LoadingPage';
+import ErrorPage from '../ErrorPage';
+import GoBack from '../../common/GoBack';
+import Spacer from '../../common/Spacer';
 import ArtworkCard from './ArtworkCard';
 
-const ArtworksPage = ({ isLoading, artworks }) => {
+const ArtworksPage = ({ isLoading, artworks, artworksError }) => {
+    const navigate = useNavigate();
+
+    const handleGoToHomePage = () => {
+        navigate('/');
+    };
+
     if (isLoading) {
         return <LoadingPage dataName="artworks" />;
+    } else if (artworksError) {
+        return (
+            <ErrorPage>
+                <p>{artworksError}</p>
+                <Spacer marginY="20px" />
+                <GoBack text={'Return Home'} handleClick={handleGoToHomePage} />
+            </ErrorPage>
+        );
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
             return (
-                <Link to={'/artworks/details/' + artwork.id} key={artwork.id}>
-                    <ArtworkCard artwork={artwork} />
-                </Link>
+                <li className="artwork-card-item" key={artwork.id}>
+                    <Link className="card-link" to={'/artworks/details/' + artwork.id}>
+                        <ArtworkCard artwork={artwork} />
+                    </Link>
+                </li>
             );
         });
         return (
             <main className="main-content">
                 <h1>Artworks</h1>
                 {artworks.length ? (
-                    <div className="artwork-card-container">{artworksJSX}</div>
+                    <ul className="artwork-card-container">{artworksJSX}</ul>
                 ) : (
                     <p>
                         <em>We're sorry, there are no artworks to display at this time.</em>

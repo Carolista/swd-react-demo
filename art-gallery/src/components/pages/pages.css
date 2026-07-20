@@ -17,6 +17,38 @@
     grid-area: instagram;
 }
 
+.hero-figure {
+    margin: 0;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+}
+
+.contact-link,
+.contact-link:visited {
+    color: #c66311;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contact-link:hover,
+.contact-link:active {
+    color: #b95a0a;
+    text-decoration: underline;
+}
+
+.error-page-subheading {
+    color: #1e323c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    background-color: transparent;
+    padding: 0;
+    margin: 12px 0 0;
+}
+
 #contact-icons {
     display: grid;
     justify-items: left;
@@ -33,11 +65,6 @@
 }
 
 /** MEDIA QUERIES **/
-
-/* 380-479 */
-@media screen and (min-width: 380px) {
-    /* No changes needed in this range */
-}
 
 /* 480-767 */
 @media screen and (min-width: 480px) {
@@ -62,11 +89,6 @@
     }
 }
 
-/* 1024-1199 */
-@media screen and (min-width: 1024px) {
-    /* No changes needed in this range */
-}
-
 /* 1200-1365 */
 @media screen and (min-width: 1200px) {
     #contact-icons {
@@ -76,12 +98,4 @@
     }
 }
 
-/* 1366-1599 */
-@media screen and (min-width: 1366px) {
-    /* No changes needed in this range */
-}
-
-/* 1600+ */
-@media screen and (min-width: 1600px) {
-    /* No changes needed in this range */
-}
+/* See index.css for a list of all breakpoints. */
