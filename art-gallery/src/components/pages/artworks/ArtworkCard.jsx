@@ -11,7 +11,7 @@ const ArtworkCard = ({ artwork }) => {
             />
             <div className="artwork-card-text">
                 <h3 className="artwork-card-title">{artwork.title}</h3>
-                <p className="artwork-card-artist">{artwork.artist}</p>
+                <h4 className="artwork-card-artist">{artwork.artist}</h4>
             </div>
             <Spacer marginY="10px" />
         </Card>

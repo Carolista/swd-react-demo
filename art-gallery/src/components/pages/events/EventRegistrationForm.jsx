@@ -5,7 +5,7 @@ import Button from '../../forms/input/Button';
 import Spacer from '../../common/Spacer';
 import FormItem from '../../forms/FormItem';
 
-let initialData = {
+const initialData = {
     eventId: null,
     firstName: '',
     lastName: '',
@@ -13,7 +13,7 @@ let initialData = {
     numberOfGuests: '',
 };
 
-let errorMessages = {
+const errorMessages = {
     firstNameRequired: 'First name is required.',
     lastNameRequired: 'Last name is required.',
     emailRequired: 'Email is required.',
@@ -39,16 +39,16 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
         );
     };
 
-    const handleDataChange = (ev) => {
-        let updatedData = {
-            ...data,
-            [ev.target.id]: ev.target.value,
-        };
-        setData(updatedData);
+    const handleDataChange = (domEvent) => {
+        const { id, value } = domEvent.target;
+        setData((prevData) => ({
+            ...prevData,
+            [id]: value,
+        }));
     };
 
-    const handleSubmit = (ev) => {
-        ev.preventDefault();
+    const handleSubmit = (domEvent) => {
+        domEvent.preventDefault();
         if (!isValid()) {
             setHasErrors(true);
         } else {
@@ -60,9 +60,9 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
     return (
         <>
             <h4>Register for This Event</h4>
-            <h6>
+            <h5 className="event-registration-event-title">
                 {event.title}: {event.subtitle}
-            </h6>
+            </h5>
             <Spacer marginY="10px" />
             <form className="register-form-grid" onSubmit={handleSubmit}>
                 <FormItem classes="first-name-item">
