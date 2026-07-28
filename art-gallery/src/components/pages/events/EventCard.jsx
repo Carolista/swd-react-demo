@@ -7,7 +7,7 @@ const EventCard = ({ event }) => {
     const [openForm, setOpenForm] = useState(false);
 
     const handleToggleForm = () => {
-        setOpenForm(!openForm);
+        setOpenForm((prevOpenForm) => !prevOpenForm);
     };
 
     return (
