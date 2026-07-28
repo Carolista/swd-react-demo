@@ -62,7 +62,7 @@ This is a basic version of the front end React app for the art gallery demo that
 
 #### Child Components & Props
 
-1. Add some test data (list of artworks as JS objects) at `src/test-data` (create the folder first), then import it into `App.js`.
+1. Copy the test data from my `part1-solution-basics` branch (list of artworks as JS objects) at `src/test-data/mockArtworks.js` (create the folder first), then import it into `App.js`.
 1. Create a reusable `Card` component that uses CSS classes to produce a `<div>` containing the content passed through the `children` prop.
 1. Create a second reusable `ArtworkCard` that accepts an `artwork` prop. Set it up to display a single artwork image, the title, and the artist's name. This should use of the `Card` component as a container.
 1. Between the header and footer components in `App.js`, add a `<main>` element. Add an `<h1>` heading displaying the title "Artworks."
@@ -81,10 +81,10 @@ This is a basic version of the front end React app for the art gallery demo that
 
 #### One Last Reusable Component
 
-1. If you look at the bottom of the cards displaying on the page, notice the padding is a little uneven. This has to do with the way the specific content affects the padding with its own margins. We need to add a little extra space below the artist's name in the `ArtworkCard` component where the specific issue occurs, but we don't want to change the padding of `Card` or the bottom margin of `<h6>`.
+1. If you look at the bottom of the cards displaying on the page, notice the padding is a little uneven. This has to do with the way the specific content affects the padding with its own margins. We need to add a little extra space below the artist's name in the `ArtworkCard` component where the specific issue occurs, but we don't want to change the padding of `Card` or the bottom margin of `<h4>` in `ArtworkCard`.
 1. Create a new reusable component called `Spacer` that accepts `marginX` and `marginY` props and applies it to a `<div>` using inline CSS. Make sure if either of the props is not used, the corresponding margin setting has a default value of `0` instead.
 1. This component can now be used anywhere in the app to provide an adjustment horizontally or vertically. (You could even provide for a character to be used between other content for inline spacing, as I've done in my solution.)
-1. Insert an instance of the `Spacer` component below the title & artist section in `ArtworkCard`, and experiment with the vertical margin value you pass in as a prop until it looks balanced.
+1. Insert an instance of the `Spacer` component below the title & artist section in `ArtworkCard`, and experiment with the vertical margin value you pass in as a prop until it looks balanced visually in the UI.
 
 > Use the `part1-solution-basics` branch to check my solution.
 
