@@ -10,11 +10,6 @@
     margin-bottom: 8px;
 }
 
-.criteria {
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
 .event-card-title {
     color: #c66311;
     font-size: 1.1rem;
@@ -28,6 +23,11 @@
     font-size: 1rem;
     font-weight: 600;
     text-transform: none;
+}
+
+.criteria {
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
 .register-button-container {
