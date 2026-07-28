@@ -5,7 +5,7 @@ import Spacer from '../../common/Spacer';
 import FormItem from '../../forms/FormItem';
 import Input from '../../forms/input/Input';
 
-let initialData = {
+const initialData = {
     eventId: null,
     firstName: '',
     lastName: '',
@@ -13,7 +13,7 @@ let initialData = {
     numberOfGuests: '',
 };
 
-let errorMessages = {
+const errorMessages = {
     firstNameRequired: 'First name is required.',
     lastNameRequired: 'Last name is required.',
     emailRequired: 'Email is required.',
@@ -39,20 +39,20 @@ const EventRegistrationForm = ({ event, handleCloseForm }) => {
         );
     };
 
-    const handleDataChange = (ev) => {
-        let updatedData = {
-            ...data,
-            [ev.target.id]: ev.target.value,
-        };
-        setData(updatedData);
+    const handleDataChange = (domEvent) => {
+        const { id, value } = domEvent.target;
+        setData((prevData) => ({
+            ...prevData,
+            [id]: value,
+        }));
     };
 
-    const handleSubmit = (ev) => {
-        ev.preventDefault();
+    const handleSubmit = (domEvent) => {
+        domEvent.preventDefault();
         if (!isValid()) {
             setHasErrors(true);
         } else {
-            // Eventually, submit data to back end to save to database
+            // Eventually: submit data to back end to save to database
             handleCloseForm();
         }
     };
