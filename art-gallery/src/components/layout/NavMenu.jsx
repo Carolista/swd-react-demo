@@ -1,6 +1,6 @@
+// Temporary pre-router navigation uses currentPage plus prop drilling
+// via setCurrentPage; this will be replaced by React Router in Part 5.
 const NavMenu = ({ setCurrentPage }) => {
-    // Temporary pre-router navigation for instruction.
-    // This handler-based approach is replaced with Link components in Part 5.
     return (
         <div className="nav-menu">
             <span

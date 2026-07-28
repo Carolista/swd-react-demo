@@ -18,8 +18,8 @@ const parseJSONText = (rawText, dataName) => {
 };
 
 function App() {
-    // Temporary pre-router navigation for instruction.
-    // Uses currentPage + prop drilling via setCurrentPage and will be replaced in Part 5.
+    // Temporary pre-router navigation uses currentPage plus prop drilling
+    // via setCurrentPage; this will be replaced by React Router in Part 5.
     const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);

@@ -14,13 +14,16 @@
     color: #c66311;
     font-weight: 700;
     font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 .event-card-subtitle,
-.event-card-bio-heading {
+.event-card-bio-heading,
+.event-registration-event-title {
     color: #1e323c;
     font-weight: 600;
     font-size: 1rem;
+    text-transform: none;
 }
 
 .criteria {
