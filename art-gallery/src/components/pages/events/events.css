@@ -19,17 +19,11 @@
     color: #c66311;
     font-size: 1.1rem;
     font-weight: 700;
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .event-card-subtitle,
-.event-card-bio-heading {
-    color: #1e323c;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: none;
-}
-
+.event-card-bio-heading,
 .event-registration-event-title {
     color: #1e323c;
     font-size: 1rem;
