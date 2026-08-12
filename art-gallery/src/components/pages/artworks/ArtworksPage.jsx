@@ -1,15 +1,19 @@
 import ArtworkCard from './ArtworkCard';
 import LoadingPage from '../LoadingPage';
+import ErrorPage from '../ErrorPage';
+import Spacer from '../../common/Spacer';
+import GoBack from '../../common/GoBack';
 
 const ArtworksPage = ({ isLoading, artworks, artworksError }) => {
     if (isLoading) {
         return <LoadingPage dataName="artworks" />;
     } else if (artworksError) {
         return (
-            <main className="main-content">
-                <h1>Artworks</h1>
+            <ErrorPage>
                 <p>{artworksError}</p>
-            </main>
+                <Spacer marginY="20px" />
+                <GoBack text={'Return Home'} handleClick={() => setCurrentPage('home')} />
+            </ErrorPage>
         );
     } else {
         let artworksJSX = [...artworks].map((artwork) => {
