@@ -24,7 +24,7 @@ const parseJSONText = (rawText, dataName) => {
 function App() {
     // Temporary pre-router navigation uses currentPage plus prop drilling
     // via setCurrentPage; this will be replaced by React Router in Part 5.
-    // TODO #6: Delete currentPage once no longer needed
+    // TODO #9: Delete currentPage once no longer needed
     const [currentPage, setCurrentPage] = useState('home');
     const [isLoading, setIsLoading] = useState(true);
     const [allArtworks, setAllArtworks] = useState(null);
@@ -116,9 +116,9 @@ function App() {
     }, [isLoading, allArtworks, allEvents]);
 
     // TODO #3: Convert from using currentPage to using routing for existing pages
-    // TODO #7: Add a default wildcard to routing options
-    // TODO #8: Create ArtworkDetailsPage
-    // TODO #9: Add dynamic routing for ArtworkDetailsPage below
+    // TODO #4: Add a default wildcard to routing options
+    // TODO #10: Create ArtworkDetailsPage
+    // TODO #11: Add dynamic routing for ArtworkDetailsPage below
 
     return (
         <div id="body-container">

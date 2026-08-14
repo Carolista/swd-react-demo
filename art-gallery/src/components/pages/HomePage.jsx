@@ -1,5 +1,5 @@
 const HomePage = ({ setCurrentPage }) => {
-    // TODO #4: replace handler usage with Link to collection
+    // TODO #5: replace handler usage with Link to collection
 
     return (
         <main>
