@@ -1,10 +1,10 @@
-import ArtworkCard from './ArtworkCard';
-import LoadingPage from '../LoadingPage';
-import ErrorPage from '../ErrorPage';
-import Spacer from '../../common/Spacer';
 import GoBack from '../../common/GoBack';
+import Spacer from '../../common/Spacer';
+import ErrorPage from '../ErrorPage';
+import LoadingPage from '../LoadingPage';
+import ArtworkCard from './ArtworkCard';
 
-const ArtworksPage = ({ isLoading, artworks, artworksError }) => {
+const ArtworksPage = ({ artworks, setCurrentPage, isLoading, artworksError }) => {
     if (isLoading) {
         return <LoadingPage dataName="artworks" />;
     } else if (artworksError) {

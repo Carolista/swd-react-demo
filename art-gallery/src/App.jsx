@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import Artwork from './classes/Artwork';
 import Event from './classes/Event';
+import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
 import HomePage from './components/pages/HomePage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import EventsPage from './components/pages/events/EventsPage';
-import Footer from './components/layout/Footer';
 
 const parseJSONText = (rawText, dataName) => {
     try {
@@ -124,13 +124,19 @@ function App() {
             {currentPage === 'home' && <HomePage setCurrentPage={setCurrentPage} />}
             {currentPage === 'artworks' && (
                 <ArtworksPage
-                    isLoading={isLoading}
                     artworks={allArtworks}
+                    setCurrentPage={setCurrentPage}
+                    isLoading={isLoading}
                     artworksError={artworksError}
                 />
             )}
             {currentPage === 'events' && (
-                <EventsPage isLoading={isLoading} events={allEvents} eventsError={eventsError} />
+                <EventsPage
+                    events={allEvents}
+                    setCurrentPage={setCurrentPage}
+                    isLoading={isLoading}
+                    eventsError={eventsError}
+                />
             )}
             <Footer />
         </div>

@@ -1,10 +1,10 @@
-import EventCard from './EventCard.jsx';
-import LoadingPage from '../LoadingPage.jsx';
-import ErrorPage from '../ErrorPage';
-import Spacer from '../../common/Spacer';
 import GoBack from '../../common/GoBack';
+import Spacer from '../../common/Spacer';
+import ErrorPage from '../ErrorPage';
+import LoadingPage from '../LoadingPage.jsx';
+import EventCard from './EventCard.jsx';
 
-const EventsPage = ({ isLoading, events, eventsError }) => {
+const EventsPage = ({ events, setCurrentPage, isLoading, eventsError }) => {
     if (isLoading) {
         return <LoadingPage dataName="events" />;
     } else if (eventsError) {
