@@ -1,12 +1,12 @@
-import LoadingPage from '../LoadingPage.jsx';
-import ErrorPage from '../ErrorPage.jsx';
 import GoBack from '../../common/GoBack.jsx';
 import Spacer from '../../common/Spacer.jsx';
+import ErrorPage from '../ErrorPage.jsx';
+import LoadingPage from '../LoadingPage.jsx';
 import EventCard from './EventCard.jsx';
 
 // TODO #8: Remove setCurrentPage prop and create a click handler that navigates to the home page on GoBack instead
 
-const EventsPage = ({ isLoading, events, eventsError, setCurrentPage }) => {
+const EventsPage = ({ events, setCurrentPage, isLoading, eventsError }) => {
     if (isLoading) {
         return <LoadingPage dataName="events" />;
     } else if (eventsError) {

@@ -1,14 +1,14 @@
-import LoadingPage from '../LoadingPage';
-import ErrorPage from '../ErrorPage';
 import GoBack from '../../common/GoBack';
 import Spacer from '../../common/Spacer';
+import ErrorPage from '../ErrorPage';
+import LoadingPage from '../LoadingPage';
 import ArtworkCard from './ArtworkCard';
 
 // TODO #7: Remove setCurrentPage prop and create a click handler that navigates to the home page on GoBack instead
-// TODO #12: Link ArtworkCard to ArtworkDetailsPage for that artwork 
+// TODO #12: Link ArtworkCard to ArtworkDetailsPage for that artwork
 //  and move key attribute
 
-const ArtworksPage = ({ isLoading, artworks, artworksError, setCurrentPage }) => {
+const ArtworksPage = ({ artworks, setCurrentPage, isLoading, artworksError }) => {
     if (isLoading) {
         return <LoadingPage dataName="artworks" />;
     } else if (artworksError) {

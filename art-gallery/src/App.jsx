@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import Artwork from './classes/Artwork';
 import Event from './classes/Event';
+import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
-import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ArtworksPage from './components/pages/artworks/ArtworksPage';
 import EventsPage from './components/pages/events/EventsPage';
+import HomePage from './components/pages/HomePage';
 import LocationPage from './components/pages/LocationPage';
-import Footer from './components/layout/Footer';
 
 // TODO #1: Install react-router with npm
 
@@ -127,18 +127,18 @@ function App() {
             {currentPage === 'about' && <AboutPage />}
             {currentPage === 'artworks' && (
                 <ArtworksPage
-                    isLoading={isLoading}
                     artworks={allArtworks}
-                    artworksError={artworksError}
                     setCurrentPage={setCurrentPage}
+                    isLoading={isLoading}
+                    artworksError={artworksError}
                 />
             )}
             {currentPage === 'events' && (
                 <EventsPage
-                    isLoading={isLoading}
                     events={allEvents}
-                    eventsError={eventsError}
                     setCurrentPage={setCurrentPage}
+                    isLoading={isLoading}
+                    eventsError={eventsError}
                 />
             )}
             {currentPage === 'location' && <LocationPage />}
