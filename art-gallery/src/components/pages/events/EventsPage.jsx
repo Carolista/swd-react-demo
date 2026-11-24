@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router';
-import LoadingPage from '../LoadingPage.jsx';
-import ErrorPage from '../ErrorPage.jsx';
 import GoBack from '../../common/GoBack.jsx';
 import Spacer from '../../common/Spacer.jsx';
+import ErrorPage from '../ErrorPage.jsx';
+import LoadingPage from '../LoadingPage.jsx';
 import EventCard from './EventCard.jsx';
 
-const EventsPage = ({ isLoading, events, eventsError }) => {
+const EventsPage = ({ events, isLoading, eventsError }) => {
     const navigate = useNavigate();
 
     const handleGoToHomePage = () => {

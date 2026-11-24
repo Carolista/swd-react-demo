@@ -1,11 +1,11 @@
 import { Link, useNavigate } from 'react-router';
-import LoadingPage from '../LoadingPage';
-import ErrorPage from '../ErrorPage';
 import GoBack from '../../common/GoBack';
 import Spacer from '../../common/Spacer';
+import ErrorPage from '../ErrorPage';
+import LoadingPage from '../LoadingPage';
 import ArtworkCard from './ArtworkCard';
 
-const ArtworksPage = ({ isLoading, artworks, artworksError }) => {
+const ArtworksPage = ({ artworks, isLoading, artworksError }) => {
     const navigate = useNavigate();
 
     const handleGoToHomePage = () => {

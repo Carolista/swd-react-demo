@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import Artwork from './classes/Artwork';
-import Header from './components/layout/Header';
-import HomePage from './components/pages/HomePage';
-import ArtworksPage from './components/pages/artworks/ArtworksPage';
-import ArtworkDetailsPage from './components/pages/artworks/ArtworkDetailsPage';
-import AboutPage from './components/pages/AboutPage';
-import EventsPage from './components/pages/events/EventsPage';
-import LocationPage from './components/pages/LocationPage';
-import Footer from './components/layout/Footer';
 import Event from './classes/Event';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
+import AboutPage from './components/pages/AboutPage';
+import ArtworkDetailsPage from './components/pages/artworks/ArtworkDetailsPage';
+import ArtworksPage from './components/pages/artworks/ArtworksPage';
+import EventsPage from './components/pages/events/EventsPage';
+import HomePage from './components/pages/HomePage';
+import LocationPage from './components/pages/LocationPage';
 
 const parseJSONText = (rawText, dataName) => {
     try {
@@ -121,8 +121,8 @@ function App() {
                     path="/artworks"
                     element={
                         <ArtworksPage
-                            isLoading={isLoading}
                             artworks={allArtworks}
+                            isLoading={isLoading}
                             artworksError={artworksError}
                         />
                     }
@@ -131,8 +131,8 @@ function App() {
                     path="/artworks/details/:id"
                     element={
                         <ArtworkDetailsPage
-                            isLoading={isLoading}
                             artworks={allArtworks}
+                            isLoading={isLoading}
                             artworksError={artworksError}
                         />
                     }
@@ -141,8 +141,8 @@ function App() {
                     path="/events"
                     element={
                         <EventsPage
-                            isLoading={isLoading}
                             events={allEvents}
+                            isLoading={isLoading}
                             eventsError={eventsError}
                         />
                     }
